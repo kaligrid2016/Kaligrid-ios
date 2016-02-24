@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */; };
+		7A8CD8F71C7D53B100D462C8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */; };
+		7A8CD8F91C7D53C400D462C8 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */; };
+		7A8CD8FB1C7D53D500D462C8 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8FA1C7D53D500D462C8 /* FifthViewController.swift */; };
 		7ACB9E1C1C7A758C0003A65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9E1B1C7A758C0003A65C /* AppDelegate.swift */; };
 		7ACB9E1E1C7A758C0003A65C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */; };
 		7ACB9E201C7A758C0003A65C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9E1F1C7A758C0003A65C /* SecondViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		7A8CD8FA1C7D53D500D462C8 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		7ACB9E181C7A758C0003A65C /* Kaligrid-beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaligrid-beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACB9E1B1C7A758C0003A65C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				7ACB9E241C7A758C0003A65C /* Assets.xcassets */,
 				7ACB9E261C7A758C0003A65C /* LaunchScreen.storyboard */,
 				7ACB9E291C7A758C0003A65C /* Info.plist */,
+				7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */,
+				7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */,
+				7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */,
+				7A8CD8FA1C7D53D500D462C8 /* FifthViewController.swift */,
 			);
 			path = "Kaligrid-beta";
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8CD8F91C7D53C400D462C8 /* FourthViewController.swift in Sources */,
+				7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */,
 				7ACB9E201C7A758C0003A65C /* SecondViewController.swift in Sources */,
+				7A8CD8F71C7D53B100D462C8 /* ThirdViewController.swift in Sources */,
 				7ACB9E1C1C7A758C0003A65C /* AppDelegate.swift in Sources */,
 				7ACB9E1E1C7A758C0003A65C /* FirstViewController.swift in Sources */,
+				7A8CD8FB1C7D53D500D462C8 /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +306,7 @@
 				7ACB9E2E1C7A758C0003A65C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
