@@ -13,7 +13,15 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var label2: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // Tab bar controller
+        let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_grid.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_grid_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
+        self.tabBarItem = customTabBarItem
     }
 
     override func didReceiveMemoryWarning() {
