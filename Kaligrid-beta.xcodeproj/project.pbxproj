@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CDF1C83EE200074D0C6 /* login_facebook.png */; };
+		7A713CE21C83EE200074D0C6 /* login_google.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE01C83EE200074D0C6 /* login_google.png */; };
+		7A713CE51C83F3FF0074D0C6 /* button_float_add_whole.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */; };
 		7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */; };
 		7A8CD8F71C7D53B100D462C8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */; };
 		7A8CD8F91C7D53C400D462C8 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A713CDF1C83EE200074D0C6 /* login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_facebook.png; sourceTree = "<group>"; };
+		7A713CE01C83EE200074D0C6 /* login_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_google.png; sourceTree = "<group>"; };
+		7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_float_add_whole.png; sourceTree = "<group>"; };
 		7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A713CDE1C83ED110074D0C6 /* LoginImages */ = {
+			isa = PBXGroup;
+			children = (
+				7A713CDF1C83EE200074D0C6 /* login_facebook.png */,
+				7A713CE01C83EE200074D0C6 /* login_google.png */,
+			);
+			name = LoginImages;
+			sourceTree = "<group>";
+		};
+		7A713CE31C83F3E90074D0C6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		7A8CD9061C7D60FE00D462C8 /* TabbarIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +198,8 @@
 				7ACB9E241C7A758C0003A65C /* Assets.xcassets */,
 				7ACB9E261C7A758C0003A65C /* LaunchScreen.storyboard */,
 				7ACB9E291C7A758C0003A65C /* Info.plist */,
+				7A713CE31C83F3E90074D0C6 /* Buttons */,
+				7A713CDE1C83ED110074D0C6 /* LoginImages */,
 				7A8CD9061C7D60FE00D462C8 /* TabbarIcons */,
 			);
 			path = "Kaligrid-beta";
@@ -244,6 +269,7 @@
 				7A8CD91D1C7D613600D462C8 /* icon_bottom_kali_selected@2x.png in Resources */,
 				7A8CD9241C7D613600D462C8 /* icon_bottom_me_selected@3x.png in Resources */,
 				7A8CD91E1C7D613600D462C8 /* icon_bottom_kali_selected@3x.png in Resources */,
+				7A713CE21C83EE200074D0C6 /* login_google.png in Resources */,
 				7AF00B991C7FF5DF00FB22E3 /* icon_bottom_friends.png in Resources */,
 				7AF00BA71C7FF5DF00FB22E3 /* icon_bottom_me@3x.png in Resources */,
 				7AF00BA31C7FF5DF00FB22E3 /* icon_bottom_list@2x.png in Resources */,
@@ -255,11 +281,13 @@
 				7AF00BA11C7FF5DF00FB22E3 /* icon_bottom_kali@3x.png in Resources */,
 				7AF00B9C1C7FF5DF00FB22E3 /* icon_bottom_grid.png in Resources */,
 				7A8CD91C1C7D613600D462C8 /* icon_bottom_kali_selected.png in Resources */,
+				7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */,
 				7A8CD9181C7D613600D462C8 /* icon_bottom_friends_selected@3x.png in Resources */,
 				7AF00BA01C7FF5DF00FB22E3 /* icon_bottom_kali@2x.png in Resources */,
 				7A8CD9161C7D613600D462C8 /* icon_bottom_friends_selected.png in Resources */,
 				7A8CD91F1C7D613600D462C8 /* icon_bottom_list_selected.png in Resources */,
 				7ACB9E281C7A758C0003A65C /* LaunchScreen.storyboard in Resources */,
+				7A713CE51C83F3FF0074D0C6 /* button_float_add_whole.png in Resources */,
 				7ACB9E251C7A758C0003A65C /* Assets.xcassets in Resources */,
 				7A8CD9171C7D613600D462C8 /* icon_bottom_friends_selected@2x.png in Resources */,
 				7AF00BA41C7FF5DF00FB22E3 /* icon_bottom_list@3x.png in Resources */,

@@ -10,22 +10,19 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var listTable: UITableView!
+    @IBAction func addButton(sender: AnyObject) {
+    }
     @IBOutlet weak var label1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Tab bar controller
-        
-        
-        // Tab bar controller
-        
-
-    }
-    
-    override func viewDidAppear(animated: Bool) {
+        // Bottom Tab Bar Controller
         let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_list.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_list_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
         self.tabBarItem = customTabBarItem
+        
     }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

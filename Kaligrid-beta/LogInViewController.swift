@@ -15,6 +15,11 @@ class LogInViewController: UIViewController {
 
     @IBOutlet weak var instructionOutlet: UILabel!
     
+    @IBAction func facebookAction(sender: AnyObject) {
+    }
+    
+    @IBAction func googleAction(sender: AnyObject) {
+    }
     
     @IBAction func loginAction(sender: AnyObject) {
         // TODO: Check if username/password combination is correct
