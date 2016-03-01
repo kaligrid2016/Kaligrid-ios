@@ -307,7 +307,6 @@
 		7ACB9E1A1C7A758C0003A65C /* Kaligrid-beta */ = {
 			isa = PBXGroup;
 			children = (
-				7A072FC01C85074F009CD798 /* AmazonAws */,
 				7ACB9E1B1C7A758C0003A65C /* AppDelegate.swift */,
 				7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */,
 				7AF00BA81C800D0E00FB22E3 /* TabbarViewController.swift */,
@@ -320,6 +319,7 @@
 				7ACB9E241C7A758C0003A65C /* Assets.xcassets */,
 				7ACB9E261C7A758C0003A65C /* LaunchScreen.storyboard */,
 				7ACB9E291C7A758C0003A65C /* Info.plist */,
+				7A072FC01C85074F009CD798 /* AmazonAws */,
 				7A713CE31C83F3E90074D0C6 /* Buttons */,
 				7A713CDE1C83ED110074D0C6 /* LoginImages */,
 				7A8CD9061C7D60FE00D462C8 /* TabbarIcons */,
