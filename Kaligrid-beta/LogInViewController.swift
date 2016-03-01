@@ -46,7 +46,7 @@ class LogInViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         // TODO: if logged in, automatically go to view
         if true{
-        self.performSegueWithIdentifier("login", sender:self)    
+        self.performSegueWithIdentifier("login", sender:self)
         }
         // END OF TODO
         
