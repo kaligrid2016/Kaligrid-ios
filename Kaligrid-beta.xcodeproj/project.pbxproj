@@ -17,9 +17,18 @@
 		7A072FDB1C85074F009CD798 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A072FCF1C85074F009CD798 /* Localizable.strings */; };
 		7A072FDC1C85074F009CD798 /* AWSUserFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FD31C85074F009CD798 /* AWSUserFileManager.m */; };
 		7A072FDD1C85074F009CD798 /* AWSTask+CheckExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */; };
+		7A52A44C1C86A5C100CAC30A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A44B1C86A5C100CAC30A /* Foundation.framework */; };
+		7A52A44E1C86A5D200CAC30A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A44D1C86A5D200CAC30A /* UIKit.framework */; };
+		7A52A4501C86A5EA00CAC30A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A44F1C86A5EA00CAC30A /* CoreLocation.framework */; };
+		7A52A4521C86A5F900CAC30A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A4511C86A5F900CAC30A /* CoreMotion.framework */; };
+		7A52A4541C86A60600CAC30A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A4531C86A60600CAC30A /* Security.framework */; };
+		7A52A4561C86A61400CAC30A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A4551C86A61400CAC30A /* MediaPlayer.framework */; };
+		7A52A4581C86A62300CAC30A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A4571C86A62300CAC30A /* AssetsLibrary.framework */; };
 		7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CDF1C83EE200074D0C6 /* login_facebook.png */; };
 		7A713CE21C83EE200074D0C6 /* login_google.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE01C83EE200074D0C6 /* login_google.png */; };
 		7A713CE51C83F3FF0074D0C6 /* button_float_add_whole.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */; };
+		7A7F72481C89356000B7DC29 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72471C89356000B7DC29 /* NewEventViewController.swift */; };
+		7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */; };
 		7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */; };
 		7A8CD8F71C7D53B100D462C8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */; };
 		7A8CD8F91C7D53C400D462C8 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */; };
@@ -93,9 +102,18 @@
 		7A072FD31C85074F009CD798 /* AWSUserFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSUserFileManager.m; sourceTree = "<group>"; };
 		7A072FD51C85074F009CD798 /* AWSTask+CheckExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AWSTask+CheckExceptions.h"; sourceTree = "<group>"; };
 		7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AWSTask+CheckExceptions.m"; sourceTree = "<group>"; };
+		7A52A44B1C86A5C100CAC30A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A52A44D1C86A5D200CAC30A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7A52A44F1C86A5EA00CAC30A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7A52A4511C86A5F900CAC30A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		7A52A4531C86A60600CAC30A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7A52A4551C86A61400CAC30A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7A52A4571C86A62300CAC30A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		7A713CDF1C83EE200074D0C6 /* login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_facebook.png; sourceTree = "<group>"; };
 		7A713CE01C83EE200074D0C6 /* login_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_google.png; sourceTree = "<group>"; };
 		7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_float_add_whole.png; sourceTree = "<group>"; };
+		7A7F72471C89356000B7DC29 /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
+		7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +173,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A52A4581C86A62300CAC30A /* AssetsLibrary.framework in Frameworks */,
+				7A52A4561C86A61400CAC30A /* MediaPlayer.framework in Frameworks */,
+				7A52A4541C86A60600CAC30A /* Security.framework in Frameworks */,
+				7A52A4521C86A5F900CAC30A /* CoreMotion.framework in Frameworks */,
+				7A52A4501C86A5EA00CAC30A /* CoreLocation.framework in Frameworks */,
+				7A52A44E1C86A5D200CAC30A /* UIKit.framework in Frameworks */,
+				7A52A44C1C86A5C100CAC30A /* Foundation.framework in Frameworks */,
 				7A06A00C1C852F3F00318ED0 /* SystemConfiguration.framework in Frameworks */,
 				7A06A00A1C852F3300318ED0 /* AddressBook.framework in Frameworks */,
 				7A06A0081C852F2000318ED0 /* StoreKit.framework in Frameworks */,
@@ -310,14 +335,16 @@
 				7ACB9E1B1C7A758C0003A65C /* AppDelegate.swift */,
 				7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */,
 				7AF00BA81C800D0E00FB22E3 /* TabbarViewController.swift */,
+				7A7F72471C89356000B7DC29 /* NewEventViewController.swift */,
+				7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */,
 				7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */,
 				7ACB9E1F1C7A758C0003A65C /* SecondViewController.swift */,
 				7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */,
 				7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */,
 				7A8CD8FA1C7D53D500D462C8 /* FifthViewController.swift */,
-				7ACB9E211C7A758C0003A65C /* Main.storyboard */,
 				7ACB9E241C7A758C0003A65C /* Assets.xcassets */,
 				7ACB9E261C7A758C0003A65C /* LaunchScreen.storyboard */,
+				7ACB9E211C7A758C0003A65C /* Main.storyboard */,
 				7ACB9E291C7A758C0003A65C /* Info.plist */,
 				7A072FC01C85074F009CD798 /* AmazonAws */,
 				7A713CE31C83F3E90074D0C6 /* Buttons */,
@@ -330,6 +357,13 @@
 		7AF9F3641C852AE600F14B38 /* Sdk */ = {
 			isa = PBXGroup;
 			children = (
+				7A52A44B1C86A5C100CAC30A /* Foundation.framework */,
+				7A52A44D1C86A5D200CAC30A /* UIKit.framework */,
+				7A52A44F1C86A5EA00CAC30A /* CoreLocation.framework */,
+				7A52A4511C86A5F900CAC30A /* CoreMotion.framework */,
+				7A52A4531C86A60600CAC30A /* Security.framework */,
+				7A52A4551C86A61400CAC30A /* MediaPlayer.framework */,
+				7A52A4571C86A62300CAC30A /* AssetsLibrary.framework */,
 				7A06A00B1C852F3F00318ED0 /* SystemConfiguration.framework */,
 				7A06A0091C852F3300318ED0 /* AddressBook.framework */,
 				7A06A0071C852F2000318ED0 /* StoreKit.framework */,
@@ -487,11 +521,13 @@
 				7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */,
 				7ACB9E201C7A758C0003A65C /* SecondViewController.swift in Sources */,
 				7A8CD8F71C7D53B100D462C8 /* ThirdViewController.swift in Sources */,
+				7A7F72481C89356000B7DC29 /* NewEventViewController.swift in Sources */,
 				7ACB9E1C1C7A758C0003A65C /* AppDelegate.swift in Sources */,
 				7A072FDA1C85074F009CD798 /* AWSGoogleSignInProvider.m in Sources */,
 				7A072FD91C85074F009CD798 /* AWSIdentityManager.m in Sources */,
 				7A072FD71C85074F009CD798 /* AWSMobileClient.m in Sources */,
 				7A072FDD1C85074F009CD798 /* AWSTask+CheckExceptions.m in Sources */,
+				7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */,
 				7ACB9E1E1C7A758C0003A65C /* FirstViewController.swift in Sources */,
 				7A8CD8FB1C7D53D500D462C8 /* FifthViewController.swift in Sources */,
 			);
@@ -625,6 +661,7 @@
 				);
 				INFOPLIST_FILE = "Kaligrid-beta/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appfish.Kaligrid-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kaligrid/Documents/Kaligrid-beta/Kaligrid-beta/AmazonAws/Kaligrid-beta-Bridging-Header.h";
@@ -646,6 +683,7 @@
 				);
 				INFOPLIST_FILE = "Kaligrid-beta/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appfish.Kaligrid-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kaligrid/Documents/Kaligrid-beta/Kaligrid-beta/AmazonAws/Kaligrid-beta-Bridging-Header.h";

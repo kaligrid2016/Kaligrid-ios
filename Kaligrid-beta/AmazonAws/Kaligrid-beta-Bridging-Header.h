@@ -6,9 +6,17 @@
 //  Copyright © 2016 Kaligrid. All rights reserved.
 //
 
-#ifndef Kaligrid_beta_Bridging_Header_h
-#define Kaligrid_beta_Bridging_Header_h
 
+//#import "AWSConfiguration.h"
 #import "AWSMobileClient.h"
+//#import "AWSContentManager.h"
+//#import "AWSCorePrivateHeader.h"
+#import "AWSIdentityManager.h"
+//#import "AWSGoogleSignInProvider.h"
+//#import "AWSSignInProvider.h"
+//#import "AWSUserFileManager.h"
+//#import "AWSTask+CheckExceptions.h"
 
-#endif /* Kaligrid_beta_Bridging_Header_h */
+//#import <AWSCore/AWSCore.h>
+
+

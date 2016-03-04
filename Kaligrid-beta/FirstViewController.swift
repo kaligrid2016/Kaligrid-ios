@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var userName: UILabel!
+    
     @IBOutlet weak var listTable: UITableView!
     @IBAction func addButton(sender: AnyObject) {
     }
@@ -20,6 +22,20 @@ class FirstViewController: UIViewController {
         // Bottom Tab Bar Controller
         let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_list.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_list_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
         self.tabBarItem = customTabBarItem
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let vavi = AWSIdentityManager.sharedInstance()
+        let strName = AWSIdentityManager.sharedInstance().userName
+        if (strName != nil) {
+            self.userName.text = strName
+        }
+        else {
+            self.userName.text = "GUEST USER"
+        }
         
     }
    

@@ -18,6 +18,20 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.appfish.Kaligrid-beta</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.appfish.Kaligrid-beta</string>
+				<string>com.googleusercontent.apps.165843810225-3fa59v13gdlg3pi4vmd97fsc3kumovkj</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>

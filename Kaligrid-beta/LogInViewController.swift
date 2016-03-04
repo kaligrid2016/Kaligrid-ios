@@ -8,35 +8,39 @@
 
 import UIKit
 
+var LOG_TAG = [String]();
+
 class LogInViewController: UIViewController {
-
-    @IBOutlet weak var passwordOutlet: UITextField!
-    @IBOutlet weak var usernameOutlet: UITextField!
-
-    @IBOutlet weak var instructionOutlet: UILabel!
     
-    @IBAction func facebookAction(sender: AnyObject) {
-    }
+    var didSignInObserver: AnyObject? = nil
     
-    @IBAction func googleAction(sender: AnyObject) {
-    }
-    
-    @IBAction func loginAction(sender: AnyObject) {
-        // TODO: Check if username/password combination is correct
-        if usernameOutlet.text == "danielkim116" && passwordOutlet.text == "welcome"{
-        self.performSegueWithIdentifier("login", sender:self)
-        } else{
-            instructionOutlet.text="Wrong! Enter Again"
+    @IBAction func googleLogInAction(sender: AnyObject) {
+                if AWSIdentityManager.sharedInstance().loggedIn{
+                    self.performSegueWithIdentifier("login", sender:self)
+                }else{
+                    self.handleLoginWithSignInProvider(AWSSignInProviderType.Google)
         }
-        // END OF TODO
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        weak var weakSelf: LogInViewController? = self
+        self.didSignInObserver = NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification, object: AWSIdentityManager.sharedInstance(), queue: NSOperationQueue.mainQueue(), usingBlock: {(note: NSNotification) -> Void in
+            weakSelf!.presentingViewController!.dismissViewControllerAnimated(true, completion:nil)
+        })
 
-        // Do any additional setup after loading the view.
+        if AWSIdentityManager.sharedInstance().loggedIn{
+            self.performSegueWithIdentifier("login", sender:self)
+        }
     }
 
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self.didSignInObserver!)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,21 +48,32 @@ class LogInViewController: UIViewController {
     
 
     override func viewDidAppear(animated: Bool) {
-        // TODO: if logged in, automatically go to view
-        if true{
-        self.performSegueWithIdentifier("login", sender:self)
+        if AWSIdentityManager.sharedInstance().loggedIn{
+          self.performSegueWithIdentifier("login", sender:self)
         }
-        // END OF TODO
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func handleGoogleLogin() {
+        self.handleLoginWithSignInProvider(AWSSignInProviderType.Google)
     }
-    */
-
+    
+    func handleLoginWithSignInProvider(signInProviderType: AWSSignInProviderType) {
+        AWSIdentityManager.sharedInstance().loginWithSignInProvider(signInProviderType, completionHandler:
+            {(result: AnyObject!, error: NSError!) in
+            if (error == nil) {
+                self.performSegueWithIdentifier("login", sender:self)
+                dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                    //self.dismissViewControllerAnimated(true, completion: { _ in })
+                    //self.parentViewController!.dismissViewControllerAnimated(true, completion:nil)
+                    //self.presentViewController(self, animated: true, completion:nil)
+ 
+                })
+            }
+            
+                print("result = \(result), error= \(error)")
+        })
+        
+self.performSegueWithIdentifier("login", sender:self)
+    }
 }
