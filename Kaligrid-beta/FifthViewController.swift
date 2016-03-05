@@ -10,6 +10,10 @@ import UIKit
 
 class FifthViewController: UIViewController {
 
+    @IBOutlet weak var usernameOutlet: UILabel!
+    @IBAction func logoutAction(sender: AnyObject) {
+        self.handleLogout()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,9 +26,30 @@ class FifthViewController: UIViewController {
         self.tabBarItem = customTabBarItem
     }
 
+    override func viewWillAppear(animated: Bool) {
+        let strName = AWSIdentityManager.sharedInstance().userName
+        if (strName != nil) {
+            self.usernameOutlet.text = strName
+        }
+        else {
+            self.usernameOutlet.text = "GUEST USER"
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func handleLogout() {
+        if AWSIdentityManager.sharedInstance().loggedIn {
+            AWSIdentityManager.sharedInstance().logoutWithCompletionHandler({(result: AnyObject!, error: NSError!)  in
+                self.performSegueWithIdentifier("logout", sender:self)
+            })
+            //NSLog(@"%@: %@ Logout Successful", LOG_TAG, [signInProvider getDisplayName]);
+        }
+        else {
+            assert(false)
+        }
     }
     
 

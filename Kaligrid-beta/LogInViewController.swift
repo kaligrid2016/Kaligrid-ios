@@ -27,8 +27,14 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         
         weak var weakSelf: LogInViewController? = self
+        
+        
+        
         self.didSignInObserver = NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification, object: AWSIdentityManager.sharedInstance(), queue: NSOperationQueue.mainQueue(), usingBlock: {(note: NSNotification) -> Void in
-            weakSelf!.presentingViewController!.dismissViewControllerAnimated(true, completion:nil)
+            let weakSelfVC = weakSelf?.presentingViewController
+            if weakSelfVC != nil{
+                weakSelfVC!.dismissViewControllerAnimated(true, completion:nil)
+            }
         })
 
         if AWSIdentityManager.sharedInstance().loggedIn{
@@ -73,7 +79,5 @@ class LogInViewController: UIViewController {
             
                 print("result = \(result), error= \(error)")
         })
-        
-self.performSegueWithIdentifier("login", sender:self)
     }
 }
