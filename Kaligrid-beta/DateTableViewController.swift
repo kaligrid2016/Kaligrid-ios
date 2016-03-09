@@ -34,8 +34,11 @@ class DateTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.sectionFooterHeight = 0.0;
+        self.tableView.backgroundColor = UIColor.whiteColor()
         fromDatePickerChanged()
         toDatePickerChanged()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,10 +53,10 @@ class DateTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 && indexPath.row == 0 {
+        if indexPath.section == 0 && indexPath.row == 1 {
             fromToggleDatepicker()
         }
-        if indexPath.section == 0 && indexPath.row == 2 {
+        if indexPath.section == 0 && indexPath.row == 3 {
             toToggleDatepicker()
         }
     }
@@ -69,15 +72,23 @@ class DateTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if fromDatePickerHidden && indexPath.section == 0 && indexPath.row == 1{
+        if fromDatePickerHidden && indexPath.section == 0 && indexPath.row == 2{
             return 0
         }
         else {
-            if toDatePickerHidden && indexPath.section == 0 && indexPath.row == 3{
+            if toDatePickerHidden && indexPath.section == 0 && indexPath.row == 4{
                 return 0
             }
             return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
         }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
+        header.textLabel!.textColor = UIColor.blackColor()
+        header.textLabel!.font = UIFont.boldSystemFontOfSize(18)
+        header.contentView.backgroundColor = UIColor.whiteColor()
     }
     
  
