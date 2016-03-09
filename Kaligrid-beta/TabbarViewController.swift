@@ -26,6 +26,9 @@ class TabbarViewController: UITabBarController {
         self.tabBar.items![i].image = listImage
         self.tabBar.items![i].title = nil
         }
+        
+        
+        
         // Set the tab bar background color
         UITabBar.appearance().barTintColor = UIColor.whiteColor()
 

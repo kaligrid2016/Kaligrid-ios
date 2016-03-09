@@ -10,10 +10,10 @@ import UIKit
 
 class FifthViewController: UIViewController {
 
-    @IBOutlet weak var usernameOutlet: UILabel!
+   /* @IBOutlet weak var usernameOutlet: UILabel!
     @IBAction func logoutAction(sender: AnyObject) {
         self.handleLogout()
-    }
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +25,7 @@ class FifthViewController: UIViewController {
         let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_me.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_me_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
         self.tabBarItem = customTabBarItem
     }
-
+/*
     override func viewWillAppear(animated: Bool) {
         let strName = AWSIdentityManager.sharedInstance().userName
         if (strName != nil) {
@@ -50,7 +50,7 @@ class FifthViewController: UIViewController {
         else {
             assert(false)
         }
-    }
+    }*/
     
 
     /*
