@@ -15,6 +15,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
     @IBOutlet weak var listTable: UITableView!
     @IBAction func addButton(sender: AnyObject) {
     }
+    @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var label1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,25 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
         //self.calendar.appearance.selectionColor = UIColor.blueColor()
         self.calendar.appearance.todayColor = UIColor(red: 0.031, green: 0.729, blue: 0.729, alpha: 1.0)
         
+        // Calendar mode
+        
+        self.calendar.focusOnSingleSelectedDate = true
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGestureUp:")
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGestureDown:")
+        swipeUp.direction = UISwipeGestureRecognizerDirection.Up
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipeUp)
+        self.view.addGestureRecognizer(swipeDown)
+    }
+    
+    func respondToSwipeGestureUp(gesture: UIGestureRecognizer) {
+        self.calendar.setScope(.Week, animated: true)
+        calendarHeightConstraint.constant = 75.0
+    }
+    
+    func respondToSwipeGestureDown(gesture: UIGestureRecognizer) {
+        self.calendar.setScope(.Month, animated: true)
+        calendarHeightConstraint.constant = 200.0
     }
     
     override func viewWillAppear(animated: Bool) {
