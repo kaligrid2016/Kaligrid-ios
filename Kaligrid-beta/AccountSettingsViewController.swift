@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class AccountSettingsViewController: UIViewController {
 
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBAction func logoutAction(sender: AnyObject) {
