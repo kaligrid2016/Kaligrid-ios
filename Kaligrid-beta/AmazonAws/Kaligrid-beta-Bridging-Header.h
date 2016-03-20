@@ -19,6 +19,7 @@
 
 //#import <AWSCore/AWSCore.h>
 
+#import <AWSDynamoDB/AWSDynamoDB.h>
 #import <FSCalendar/FSCalendar.h> // 3rd Party Calendar Components
 
 

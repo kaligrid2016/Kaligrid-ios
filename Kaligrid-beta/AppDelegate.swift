@@ -16,13 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //return true
-    
-        return AWSMobileClient.sharedInstance().didFinishLaunching(application, withOptions: launchOptions)
         
-        //return [[ AWSMobileClient sharedInstance] didFinishLaunching application,
-        //    withOptions launchOptions];
+        // Beginning of DynamoDB
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
+        
+        let configuration = AWSServiceConfiguration(
+            region: DefaultServiceRegionType,
+            credentialsProvider: credentialProvider)
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        // End of DynamoDB
 
+        // Beginning of Login
+        return AWSMobileClient.sharedInstance().didFinishLaunching(application, withOptions: launchOptions)
+        // End of Login
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

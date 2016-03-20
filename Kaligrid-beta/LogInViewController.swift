@@ -15,11 +15,7 @@ class LogInViewController: UIViewController {
     var didSignInObserver: AnyObject? = nil
     
     @IBAction func googleLogInAction(sender: AnyObject) {
-                if AWSIdentityManager.sharedInstance().loggedIn{
-                    self.performSegueWithIdentifier("login", sender:self)
-                }else{
                     self.handleLoginWithSignInProvider(AWSSignInProviderType.Google)
-        }
     }
     
     
@@ -37,9 +33,6 @@ class LogInViewController: UIViewController {
             }
         })
 
-        if AWSIdentityManager.sharedInstance().loggedIn{
-            self.performSegueWithIdentifier("login", sender:self)
-        }
     }
 
     
@@ -68,7 +61,7 @@ class LogInViewController: UIViewController {
         AWSIdentityManager.sharedInstance().loginWithSignInProvider(signInProviderType, completionHandler:
             {(result: AnyObject!, error: NSError!) in
             if (error == nil) {
-                self.performSegueWithIdentifier("login", sender:self)
+                //self.performSegueWithIdentifier("login", sender:self)
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in
                     //self.dismissViewControllerAnimated(true, completion: { _ in })
                     //self.parentViewController!.dismissViewControllerAnimated(true, completion:nil)

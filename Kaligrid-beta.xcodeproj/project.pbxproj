@@ -18,6 +18,7 @@
 		7A072FDB1C85074F009CD798 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A072FCF1C85074F009CD798 /* Localizable.strings */; };
 		7A072FDC1C85074F009CD798 /* AWSUserFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FD31C85074F009CD798 /* AWSUserFileManager.m */; };
 		7A072FDD1C85074F009CD798 /* AWSTask+CheckExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */; };
+		7A3033801C9E20E7009DC957 /* PrivacySettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30337F1C9E20E7009DC957 /* PrivacySettingTableViewController.swift */; };
 		7A52A44C1C86A5C100CAC30A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A44B1C86A5C100CAC30A /* Foundation.framework */; };
 		7A52A44E1C86A5D200CAC30A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A44D1C86A5D200CAC30A /* UIKit.framework */; };
 		7A52A4501C86A5EA00CAC30A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A44F1C86A5EA00CAC30A /* CoreLocation.framework */; };
@@ -51,10 +52,14 @@
 		7A8CD9241C7D613600D462C8 /* icon_bottom_me_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A8CD9151C7D613600D462C8 /* icon_bottom_me_selected@3x.png */; };
 		7A9FAA5E1C8FB1D6007CF78D /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9FAA5D1C8FB1D6007CF78D /* FSCalendar.framework */; };
 		7A9FAA681C8FD0BC007CF78D /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FAA671C8FD0BC007CF78D /* AccountSettingsViewController.swift */; };
+		7AB180591C9D5E4600FDCD91 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB180581C9D5E4600FDCD91 /* AWSDynamoDB.framework */; };
+		7AB1805B1C9D5F5500FDCD91 /* DynamoDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1805A1C9D5F5500FDCD91 /* DynamoDBConstants.swift */; };
+		7AB1805E1C9D7A5D00FDCD91 /* DynamoDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1805D1C9D7A5D00FDCD91 /* DynamoDBManager.swift */; };
+		7AB180601C9DEDB800FDCD91 /* SettingUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1805F1C9DEDB800FDCD91 /* SettingUITableViewController.swift */; };
+		7AB180671C9DEFDD00FDCD91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB180651C9DEFDD00FDCD91 /* Main.storyboard */; };
 		7ACB9E1C1C7A758C0003A65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9E1B1C7A758C0003A65C /* AppDelegate.swift */; };
 		7ACB9E1E1C7A758C0003A65C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */; };
 		7ACB9E201C7A758C0003A65C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9E1F1C7A758C0003A65C /* SecondViewController.swift */; };
-		7ACB9E231C7A758C0003A65C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB9E211C7A758C0003A65C /* Main.storyboard */; };
 		7ACB9E251C7A758C0003A65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB9E241C7A758C0003A65C /* Assets.xcassets */; };
 		7ACB9E281C7A758C0003A65C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB9E261C7A758C0003A65C /* LaunchScreen.storyboard */; };
 		7AF00B991C7FF5DF00FB22E3 /* icon_bottom_friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF00B8A1C7FF5DF00FB22E3 /* icon_bottom_friends.png */; };
@@ -107,6 +112,7 @@
 		7A072FD31C85074F009CD798 /* AWSUserFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSUserFileManager.m; sourceTree = "<group>"; };
 		7A072FD51C85074F009CD798 /* AWSTask+CheckExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AWSTask+CheckExceptions.h"; sourceTree = "<group>"; };
 		7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AWSTask+CheckExceptions.m"; sourceTree = "<group>"; };
+		7A30337F1C9E20E7009DC957 /* PrivacySettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacySettingTableViewController.swift; sourceTree = "<group>"; };
 		7A52A44B1C86A5C100CAC30A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7A52A44D1C86A5D200CAC30A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A52A44F1C86A5EA00CAC30A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -140,11 +146,15 @@
 		7A8CD9151C7D613600D462C8 /* icon_bottom_me_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_bottom_me_selected@3x.png"; sourceTree = "<group>"; };
 		7A9FAA5D1C8FB1D6007CF78D /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = "../../Library/Developer/Xcode/DerivedData/Kaligrid-beta-atzpmeywtkpiapgegppdsjxbkgrj/Build/Products/Debug-iphonesimulator/FSCalendar.framework"; sourceTree = "<group>"; };
 		7A9FAA671C8FD0BC007CF78D /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		7AB180581C9D5E4600FDCD91 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
+		7AB1805A1C9D5F5500FDCD91 /* DynamoDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBConstants.swift; sourceTree = "<group>"; };
+		7AB1805D1C9D7A5D00FDCD91 /* DynamoDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBManager.swift; sourceTree = "<group>"; };
+		7AB1805F1C9DEDB800FDCD91 /* SettingUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingUITableViewController.swift; sourceTree = "<group>"; };
+		7AB180661C9DEFDD00FDCD91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ACB9E181C7A758C0003A65C /* Kaligrid-beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaligrid-beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACB9E1B1C7A758C0003A65C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7ACB9E1F1C7A758C0003A65C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		7ACB9E221C7A758C0003A65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ACB9E241C7A758C0003A65C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ACB9E271C7A758C0003A65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ACB9E291C7A758C0003A65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 				7A52A4581C86A62300CAC30A /* AssetsLibrary.framework in Frameworks */,
 				7A52A4561C86A61400CAC30A /* MediaPlayer.framework in Frameworks */,
 				7A52A4541C86A60600CAC30A /* Security.framework in Frameworks */,
+				7AB180591C9D5E4600FDCD91 /* AWSDynamoDB.framework in Frameworks */,
 				7A52A4521C86A5F900CAC30A /* CoreMotion.framework in Frameworks */,
 				7A52A4501C86A5EA00CAC30A /* CoreLocation.framework in Frameworks */,
 				7A52A44E1C86A5D200CAC30A /* UIKit.framework in Frameworks */,
@@ -342,8 +353,8 @@
 		7A9FAA5B1C8FADA3007CF78D /* kaliStoryboards */ = {
 			isa = PBXGroup;
 			children = (
+				7AB180651C9DEFDD00FDCD91 /* Main.storyboard */,
 				7ACB9E261C7A758C0003A65C /* LaunchScreen.storyboard */,
-				7ACB9E211C7A758C0003A65C /* Main.storyboard */,
 			);
 			name = kaliStoryboards;
 			sourceTree = "<group>";
@@ -361,8 +372,19 @@
 				7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */,
 				7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */,
 				7A8CD8FA1C7D53D500D462C8 /* FifthViewController.swift */,
+				7AB1805F1C9DEDB800FDCD91 /* SettingUITableViewController.swift */,
+				7A30337F1C9E20E7009DC957 /* PrivacySettingTableViewController.swift */,
 			);
 			name = kaliViewControllers;
+			sourceTree = "<group>";
+		};
+		7AB1805C1C9D5F7700FDCD91 /* DynamoDB */ = {
+			isa = PBXGroup;
+			children = (
+				7AB1805A1C9D5F5500FDCD91 /* DynamoDBConstants.swift */,
+				7AB1805D1C9D7A5D00FDCD91 /* DynamoDBManager.swift */,
+			);
+			name = DynamoDB;
 			sourceTree = "<group>";
 		};
 		7ACB9E0F1C7A758C0003A65C = {
@@ -386,6 +408,7 @@
 		7ACB9E1A1C7A758C0003A65C /* Kaligrid-beta */ = {
 			isa = PBXGroup;
 			children = (
+				7AB1805C1C9D5F7700FDCD91 /* DynamoDB */,
 				7ACB9E1B1C7A758C0003A65C /* AppDelegate.swift */,
 				7ACB9E241C7A758C0003A65C /* Assets.xcassets */,
 				7ACB9E291C7A758C0003A65C /* Info.plist */,
@@ -424,6 +447,7 @@
 		7AF9F3651C852AE600F14B38 /* Aws */ = {
 			isa = PBXGroup;
 			children = (
+				7AB180581C9D5E4600FDCD91 /* AWSDynamoDB.framework */,
 				7AF9F3661C852AE600F14B38 /* AWSCore.framework */,
 				7AF9F3671C852AE600F14B38 /* AWSMobileAnalytics.framework */,
 				7AF9F3681C852AE600F14B38 /* AWSS3.framework */,
@@ -514,6 +538,7 @@
 			files = (
 				7AF00BA61C7FF5DF00FB22E3 /* icon_bottom_me@2x.png in Resources */,
 				7AF00BA51C7FF5DF00FB22E3 /* icon_bottom_me.png in Resources */,
+				7AB180671C9DEFDD00FDCD91 /* Main.storyboard in Resources */,
 				7A8CD91B1C7D613600D462C8 /* icon_bottom_grid_selected@3x.png in Resources */,
 				7A8CD91D1C7D613600D462C8 /* icon_bottom_kali_selected@2x.png in Resources */,
 				7A8CD9241C7D613600D462C8 /* icon_bottom_me_selected@3x.png in Resources */,
@@ -551,7 +576,6 @@
 				7AF00BA21C7FF5DF00FB22E3 /* icon_bottom_list.png in Resources */,
 				7A8CD9191C7D613600D462C8 /* icon_bottom_grid_selected.png in Resources */,
 				7A8CD91A1C7D613600D462C8 /* icon_bottom_grid_selected@2x.png in Resources */,
-				7ACB9E231C7A758C0003A65C /* Main.storyboard in Resources */,
 				7AF00B9E1C7FF5DF00FB22E3 /* icon_bottom_grid@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +638,7 @@
 				7A072FDC1C85074F009CD798 /* AWSUserFileManager.m in Sources */,
 				7AF00BA91C800D0E00FB22E3 /* TabbarViewController.swift in Sources */,
 				7A072FD81C85074F009CD798 /* AWSContentManager.m in Sources */,
+				7AB1805E1C9D7A5D00FDCD91 /* DynamoDBManager.swift in Sources */,
 				7A8CD8F91C7D53C400D462C8 /* FourthViewController.swift in Sources */,
 				7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */,
 				7ACB9E201C7A758C0003A65C /* SecondViewController.swift in Sources */,
@@ -622,9 +647,12 @@
 				7ACB9E1C1C7A758C0003A65C /* AppDelegate.swift in Sources */,
 				7A072FDA1C85074F009CD798 /* AWSGoogleSignInProvider.m in Sources */,
 				7A072FD91C85074F009CD798 /* AWSIdentityManager.m in Sources */,
+				7AB1805B1C9D5F5500FDCD91 /* DynamoDBConstants.swift in Sources */,
 				7A072FD71C85074F009CD798 /* AWSMobileClient.m in Sources */,
+				7A3033801C9E20E7009DC957 /* PrivacySettingTableViewController.swift in Sources */,
 				7A9FAA681C8FD0BC007CF78D /* AccountSettingsViewController.swift in Sources */,
 				7A072FDD1C85074F009CD798 /* AWSTask+CheckExceptions.m in Sources */,
+				7AB180601C9DEDB800FDCD91 /* SettingUITableViewController.swift in Sources */,
 				7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */,
 				7ACB9E1E1C7A758C0003A65C /* FirstViewController.swift in Sources */,
 				7A8CD8FB1C7D53D500D462C8 /* FifthViewController.swift in Sources */,
@@ -642,10 +670,10 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		7ACB9E211C7A758C0003A65C /* Main.storyboard */ = {
+		7AB180651C9DEFDD00FDCD91 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7ACB9E221C7A758C0003A65C /* Base */,
+				7AB180661C9DEFDD00FDCD91 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
