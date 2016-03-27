@@ -10,6 +10,14 @@ import UIKit
 
 class PrivacySettingTableViewController: UITableViewController {
 
+    @IBOutlet weak var allowUserNameSearchOutlet: UISwitch!
+    @IBOutlet weak var allowUserIDSearchOutlet: UISwitch!
+    @IBOutlet weak var allowPhoneNumberSearchOutlet: UISwitch!
+    @IBOutlet weak var allowEmailAddressSearchOutlet: UISwitch!
     
+    @IBOutlet weak var viewBasicInfo: UISwitch!
+    @IBOutlet weak var viewBasicandShared: UISwitch!
+    @IBOutlet weak var viewToFriends: UISwitch!
+
 
 }

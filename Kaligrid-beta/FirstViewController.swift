@@ -13,12 +13,16 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var listTable: UITableView!
-    @IBAction func addButton(sender: AnyObject) {
-    }
+    
+
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var addButtonLook: UIButton!
+    @IBAction func addButton(sender: AnyObject) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         // Bottom Tab Bar Controller
         let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_list.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_list_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
@@ -43,6 +47,12 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
         swipeDown.direction = UISwipeGestureRecognizerDirection.Down
         self.view.addGestureRecognizer(swipeUp)
         self.view.addGestureRecognizer(swipeDown)
+        
+        // Draw the add button
+        self.addButtonLook.frame = CGRectMake(0, 0, 36, 36)
+        self.addButtonLook.layer.cornerRadius = 0.5 * self.addButtonLook.bounds.size.width
+        self.addButtonLook.backgroundColor = UIColor(red: 0.031, green: 0.729, blue: 0.729, alpha: 1.0)
+        self.addButtonLook.setImage(UIImage(named:"icon_new.png"), forState: .Normal)
     }
     
     func respondToSwipeGestureUp(gesture: UIGestureRecognizer) {
@@ -64,6 +74,9 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func unwindToFirstViewController (sender: UIStoryboardSegue){
     }
 
 

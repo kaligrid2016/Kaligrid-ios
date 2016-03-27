@@ -26,9 +26,21 @@
 		7A52A4541C86A60600CAC30A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A4531C86A60600CAC30A /* Security.framework */; };
 		7A52A4561C86A61400CAC30A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A4551C86A61400CAC30A /* MediaPlayer.framework */; };
 		7A52A4581C86A62300CAC30A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A52A4571C86A62300CAC30A /* AssetsLibrary.framework */; };
+		7A6B5B4A1CA4D6D5009ED9DE /* icon_add_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B3E1CA4D6D5009ED9DE /* icon_add_cancel.png */; };
+		7A6B5B4B1CA4D6D5009ED9DE /* icon_location_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B3F1CA4D6D5009ED9DE /* icon_location_blue.png */; };
+		7A6B5B4C1CA4D6D5009ED9DE /* icon_location_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B401CA4D6D5009ED9DE /* icon_location_orange.png */; };
+		7A6B5B4D1CA4D6D5009ED9DE /* icon_location_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B411CA4D6D5009ED9DE /* icon_location_red.png */; };
+		7A6B5B4E1CA4D6D5009ED9DE /* icon_new_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B421CA4D6D5009ED9DE /* icon_new_cancel.png */; };
+		7A6B5B4F1CA4D6D5009ED9DE /* icon_new_event.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B431CA4D6D5009ED9DE /* icon_new_event.png */; };
+		7A6B5B501CA4D6D5009ED9DE /* icon_new_fyi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B441CA4D6D5009ED9DE /* icon_new_fyi.png */; };
+		7A6B5B511CA4D6D5009ED9DE /* icon_new_reminder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B451CA4D6D5009ED9DE /* icon_new_reminder.png */; };
+		7A6B5B521CA4D6D5009ED9DE /* icon_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B461CA4D6D5009ED9DE /* icon_new.png */; };
+		7A6B5B531CA4D6D5009ED9DE /* icon_pic_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B471CA4D6D5009ED9DE /* icon_pic_blue.png */; };
+		7A6B5B541CA4D6D5009ED9DE /* icon_pic_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B481CA4D6D5009ED9DE /* icon_pic_orange.png */; };
+		7A6B5B551CA4D6D5009ED9DE /* icon_pic_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B5B491CA4D6D5009ED9DE /* icon_pic_red.png */; };
+		7A6B5B5B1CA5DDDC009ED9DE /* EventTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6B5B5A1CA5DDDC009ED9DE /* EventTypeViewController.swift */; };
 		7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CDF1C83EE200074D0C6 /* login_facebook.png */; };
 		7A713CE21C83EE200074D0C6 /* login_google.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE01C83EE200074D0C6 /* login_google.png */; };
-		7A713CE51C83F3FF0074D0C6 /* button_float_add_whole.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */; };
 		7A7F72481C89356000B7DC29 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72471C89356000B7DC29 /* NewEventViewController.swift */; };
 		7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */; };
 		7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */; };
@@ -120,9 +132,21 @@
 		7A52A4531C86A60600CAC30A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7A52A4551C86A61400CAC30A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7A52A4571C86A62300CAC30A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		7A6B5B3E1CA4D6D5009ED9DE /* icon_add_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_add_cancel.png; path = "Add Images/icon_add_cancel.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B3F1CA4D6D5009ED9DE /* icon_location_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_location_blue.png; path = "Add Images/icon_location_blue.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B401CA4D6D5009ED9DE /* icon_location_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_location_orange.png; path = "Add Images/icon_location_orange.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B411CA4D6D5009ED9DE /* icon_location_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_location_red.png; path = "Add Images/icon_location_red.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B421CA4D6D5009ED9DE /* icon_new_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_new_cancel.png; path = "Add Images/icon_new_cancel.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B431CA4D6D5009ED9DE /* icon_new_event.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_new_event.png; path = "Add Images/icon_new_event.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B441CA4D6D5009ED9DE /* icon_new_fyi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_new_fyi.png; path = "Add Images/icon_new_fyi.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B451CA4D6D5009ED9DE /* icon_new_reminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_new_reminder.png; path = "Add Images/icon_new_reminder.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B461CA4D6D5009ED9DE /* icon_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_new.png; path = "Add Images/icon_new.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B471CA4D6D5009ED9DE /* icon_pic_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_pic_blue.png; path = "Add Images/icon_pic_blue.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B481CA4D6D5009ED9DE /* icon_pic_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_pic_orange.png; path = "Add Images/icon_pic_orange.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B491CA4D6D5009ED9DE /* icon_pic_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_pic_red.png; path = "Add Images/icon_pic_red.png"; sourceTree = SOURCE_ROOT; };
+		7A6B5B5A1CA5DDDC009ED9DE /* EventTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeViewController.swift; sourceTree = "<group>"; };
 		7A713CDF1C83EE200074D0C6 /* login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_facebook.png; sourceTree = "<group>"; };
 		7A713CE01C83EE200074D0C6 /* login_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_google.png; sourceTree = "<group>"; };
-		7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_float_add_whole.png; sourceTree = "<group>"; };
 		7A7F72471C89356000B7DC29 /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +320,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7A6B5B3D1CA4D6A7009ED9DE /* AddEventImages */ = {
+			isa = PBXGroup;
+			children = (
+				7A6B5B3E1CA4D6D5009ED9DE /* icon_add_cancel.png */,
+				7A6B5B3F1CA4D6D5009ED9DE /* icon_location_blue.png */,
+				7A6B5B401CA4D6D5009ED9DE /* icon_location_orange.png */,
+				7A6B5B411CA4D6D5009ED9DE /* icon_location_red.png */,
+				7A6B5B421CA4D6D5009ED9DE /* icon_new_cancel.png */,
+				7A6B5B431CA4D6D5009ED9DE /* icon_new_event.png */,
+				7A6B5B441CA4D6D5009ED9DE /* icon_new_fyi.png */,
+				7A6B5B451CA4D6D5009ED9DE /* icon_new_reminder.png */,
+				7A6B5B461CA4D6D5009ED9DE /* icon_new.png */,
+				7A6B5B471CA4D6D5009ED9DE /* icon_pic_blue.png */,
+				7A6B5B481CA4D6D5009ED9DE /* icon_pic_orange.png */,
+				7A6B5B491CA4D6D5009ED9DE /* icon_pic_red.png */,
+			);
+			name = AddEventImages;
+			sourceTree = "<group>";
+		};
 		7A713CDE1C83ED110074D0C6 /* LoginImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,14 +346,6 @@
 				7A713CE01C83EE200074D0C6 /* login_google.png */,
 			);
 			name = LoginImages;
-			sourceTree = "<group>";
-		};
-		7A713CE31C83F3E90074D0C6 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				7A713CE41C83F3FF0074D0C6 /* button_float_add_whole.png */,
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		7A8CD9061C7D60FE00D462C8 /* TabbarIcons */ = {
@@ -364,10 +399,11 @@
 			children = (
 				7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */,
 				7AF00BA81C800D0E00FB22E3 /* TabbarViewController.swift */,
-				7A7F72471C89356000B7DC29 /* NewEventViewController.swift */,
-				7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */,
 				7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */,
+				7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */,
+				7A7F72471C89356000B7DC29 /* NewEventViewController.swift */,
 				7A9FAA671C8FD0BC007CF78D /* AccountSettingsViewController.swift */,
+				7A6B5B5A1CA5DDDC009ED9DE /* EventTypeViewController.swift */,
 				7ACB9E1F1C7A758C0003A65C /* SecondViewController.swift */,
 				7A8CD8F61C7D53B100D462C8 /* ThirdViewController.swift */,
 				7A8CD8F81C7D53C400D462C8 /* FourthViewController.swift */,
@@ -417,8 +453,8 @@
 				7A9FAA5B1C8FADA3007CF78D /* kaliStoryboards */,
 				7A072FC01C85074F009CD798 /* AmazonAws */,
 				7AF9F3641C852AE600F14B38 /* Sdk */,
-				7A713CE31C83F3E90074D0C6 /* Buttons */,
 				7A713CDE1C83ED110074D0C6 /* LoginImages */,
+				7A6B5B3D1CA4D6A7009ED9DE /* AddEventImages */,
 				7A8CD9061C7D60FE00D462C8 /* TabbarIcons */,
 			);
 			path = "Kaligrid-beta";
@@ -538,6 +574,7 @@
 			files = (
 				7AF00BA61C7FF5DF00FB22E3 /* icon_bottom_me@2x.png in Resources */,
 				7AF00BA51C7FF5DF00FB22E3 /* icon_bottom_me.png in Resources */,
+				7A6B5B531CA4D6D5009ED9DE /* icon_pic_blue.png in Resources */,
 				7AB180671C9DEFDD00FDCD91 /* Main.storyboard in Resources */,
 				7A8CD91B1C7D613600D462C8 /* icon_bottom_grid_selected@3x.png in Resources */,
 				7A8CD91D1C7D613600D462C8 /* icon_bottom_kali_selected@2x.png in Resources */,
@@ -548,32 +585,42 @@
 				7AF00BA71C7FF5DF00FB22E3 /* icon_bottom_me@3x.png in Resources */,
 				7AF00BA31C7FF5DF00FB22E3 /* icon_bottom_list@2x.png in Resources */,
 				7A8CD9231C7D613600D462C8 /* icon_bottom_me_selected@2x.png in Resources */,
+				7A6B5B4F1CA4D6D5009ED9DE /* icon_new_event.png in Resources */,
 				7AF00B9F1C7FF5DF00FB22E3 /* icon_bottom_kali.png in Resources */,
+				7A6B5B4B1CA4D6D5009ED9DE /* icon_location_blue.png in Resources */,
 				7AF00B9A1C7FF5DF00FB22E3 /* icon_bottom_friends@2x.png in Resources */,
+				7A6B5B4A1CA4D6D5009ED9DE /* icon_add_cancel.png in Resources */,
 				7AF9F3741C852AE600F14B38 /* Amazon Software License.txt in Resources */,
 				7A8CD9211C7D613600D462C8 /* icon_bottom_list_selected@3x.png in Resources */,
 				7A8CD9221C7D613600D462C8 /* icon_bottom_me_selected.png in Resources */,
+				7A6B5B511CA4D6D5009ED9DE /* icon_new_reminder.png in Resources */,
 				7AF00BA11C7FF5DF00FB22E3 /* icon_bottom_kali@3x.png in Resources */,
 				7AF00B9C1C7FF5DF00FB22E3 /* icon_bottom_grid.png in Resources */,
 				7A8CD91C1C7D613600D462C8 /* icon_bottom_kali_selected.png in Resources */,
 				7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */,
+				7A6B5B551CA4D6D5009ED9DE /* icon_pic_red.png in Resources */,
 				7A8CD9181C7D613600D462C8 /* icon_bottom_friends_selected@3x.png in Resources */,
 				7AF9F3781C852AE600F14B38 /* GoogleSignIn.bundle in Resources */,
 				7AF00BA01C7FF5DF00FB22E3 /* icon_bottom_kali@2x.png in Resources */,
 				7A8CD9161C7D613600D462C8 /* icon_bottom_friends_selected.png in Resources */,
+				7A6B5B4C1CA4D6D5009ED9DE /* icon_location_orange.png in Resources */,
+				7A6B5B4D1CA4D6D5009ED9DE /* icon_location_red.png in Resources */,
 				7A8CD91F1C7D613600D462C8 /* icon_bottom_list_selected.png in Resources */,
 				7ACB9E281C7A758C0003A65C /* LaunchScreen.storyboard in Resources */,
+				7A6B5B4E1CA4D6D5009ED9DE /* icon_new_cancel.png in Resources */,
 				7A072FDB1C85074F009CD798 /* Localizable.strings in Resources */,
 				7AF9F3761C852AE600F14B38 /* NOTICE in Resources */,
-				7A713CE51C83F3FF0074D0C6 /* button_float_add_whole.png in Resources */,
+				7A6B5B541CA4D6D5009ED9DE /* icon_pic_orange.png in Resources */,
 				7AF9F3771C852AE600F14B38 /* CheckXcodeVersion.sh in Resources */,
 				7ACB9E251C7A758C0003A65C /* Assets.xcassets in Resources */,
 				7A8CD9171C7D613600D462C8 /* icon_bottom_friends_selected@2x.png in Resources */,
 				7AF00BA41C7FF5DF00FB22E3 /* icon_bottom_list@3x.png in Resources */,
+				7A6B5B521CA4D6D5009ED9DE /* icon_new.png in Resources */,
 				7A8CD9201C7D613600D462C8 /* icon_bottom_list_selected@2x.png in Resources */,
 				7AF00B9D1C7FF5DF00FB22E3 /* icon_bottom_grid@2x.png in Resources */,
 				7AF00B9B1C7FF5DF00FB22E3 /* icon_bottom_friends@3x.png in Resources */,
 				7AF00BA21C7FF5DF00FB22E3 /* icon_bottom_list.png in Resources */,
+				7A6B5B501CA4D6D5009ED9DE /* icon_new_fyi.png in Resources */,
 				7A8CD9191C7D613600D462C8 /* icon_bottom_grid_selected.png in Resources */,
 				7A8CD91A1C7D613600D462C8 /* icon_bottom_grid_selected@2x.png in Resources */,
 				7AF00B9E1C7FF5DF00FB22E3 /* icon_bottom_grid@3x.png in Resources */,
@@ -638,6 +685,7 @@
 				7A072FDC1C85074F009CD798 /* AWSUserFileManager.m in Sources */,
 				7AF00BA91C800D0E00FB22E3 /* TabbarViewController.swift in Sources */,
 				7A072FD81C85074F009CD798 /* AWSContentManager.m in Sources */,
+				7A6B5B5B1CA5DDDC009ED9DE /* EventTypeViewController.swift in Sources */,
 				7AB1805E1C9D7A5D00FDCD91 /* DynamoDBManager.swift in Sources */,
 				7A8CD8F91C7D53C400D462C8 /* FourthViewController.swift in Sources */,
 				7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */,
