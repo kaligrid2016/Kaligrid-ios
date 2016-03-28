@@ -22,6 +22,8 @@ class DateTableViewController: UITableViewController {
         toDatePickerChanged()
     }
     
+    @IBOutlet weak var alldaySwitchOutlet: UISwitch!
+    @IBOutlet weak var reminderSwitchOutlet: UISwitch!
     
     func fromDatePickerChanged () {
         fromDetail.text = NSDateFormatter.localizedStringFromDate(fromDatePicker.date, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
@@ -34,10 +36,15 @@ class DateTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.sectionFooterHeight = 0.0;
+        self.tableView.sectionFooterHeight = 12.0;
         self.tableView.backgroundColor = UIColor.whiteColor()
         fromDatePickerChanged()
         toDatePickerChanged()
+        
+        self.alldaySwitchOutlet.tintColor = UIColor(red: 250/225, green: 211/225, blue:145/225, alpha: 1.0)
+        self.alldaySwitchOutlet.onTintColor = UIColor(red: 245/225, green: 166/225, blue: 35/225, alpha: 1.0)
+        self.reminderSwitchOutlet.tintColor = UIColor(red: 250/225, green: 211/225, blue:145/225, alpha: 1.0)
+        self.reminderSwitchOutlet.onTintColor = UIColor(red: 245/225, green: 166/225, blue: 35/225, alpha: 1.0)
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -86,9 +93,10 @@ class DateTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.textLabel!.textColor = UIColor.blackColor()
-        header.textLabel!.font = UIFont.boldSystemFontOfSize(18)
+        header.textLabel!.textColor = UIColor(red: 245/225, green: 166/225, blue: 35/225, alpha: 1.0)
+        header.textLabel!.font = UIFont.boldSystemFontOfSize(16)
         header.contentView.backgroundColor = UIColor.whiteColor()
+    
     }
     
  

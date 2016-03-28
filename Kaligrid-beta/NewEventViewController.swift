@@ -15,14 +15,15 @@ class NewEventViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        eventTitle.setBottomBorder()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
@@ -35,4 +36,20 @@ class NewEventViewController: UIViewController {
     }
     */
 
+}
+
+extension UITextField
+{
+    func setBottomBorder(){
+        self.borderStyle = UITextBorderStyle.None;
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor(red: 245/225, green: 166/225, blue: 35/225, alpha: 1.0).CGColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width,   width:  self.frame.size.width, height: self.frame.size.height)
+        
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
+    
 }

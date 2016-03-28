@@ -48,7 +48,8 @@ class EventTypeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func unwindToEventTypeViewController (sender: UIStoryboardSegue){
+    }
         
     
 }
