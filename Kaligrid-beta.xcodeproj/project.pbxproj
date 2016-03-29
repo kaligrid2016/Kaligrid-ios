@@ -105,6 +105,7 @@
 		7A072FD31C85074F009CD798 /* AWSUserFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSUserFileManager.m; sourceTree = "<group>"; };
 		7A072FD51C85074F009CD798 /* AWSTask+CheckExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AWSTask+CheckExceptions.h"; sourceTree = "<group>"; };
 		7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AWSTask+CheckExceptions.m"; sourceTree = "<group>"; };
+		7A27BD9F1CAA097600118A5E /* DynamoDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamoDBManager.h; sourceTree = "<group>"; };
 		7A2C0EC01CA8D4870099E85B /* icon_bottom_friends_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_bottom_friends_selected.png; path = "../../../Downloads/OneDrive-2016-03-27/icon_bottom_friends_selected.png"; sourceTree = "<group>"; };
 		7A2C0EC11CA8D4870099E85B /* icon_bottom_friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_bottom_friends.png; path = "../../../Downloads/OneDrive-2016-03-27/icon_bottom_friends.png"; sourceTree = "<group>"; };
 		7A2C0EC21CA8D4870099E85B /* icon_bottom_grid_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_bottom_grid_selected.png; path = "../../../Downloads/OneDrive-2016-03-27/icon_bottom_grid_selected.png"; sourceTree = "<group>"; };
@@ -362,6 +363,7 @@
 			children = (
 				7AB1805A1C9D5F5500FDCD91 /* DynamoDBConstants.swift */,
 				7AB1805D1C9D7A5D00FDCD91 /* DynamoDBManager.swift */,
+				7A27BD9F1CAA097600118A5E /* DynamoDBManager.h */,
 			);
 			name = DynamoDB;
 			sourceTree = "<group>";

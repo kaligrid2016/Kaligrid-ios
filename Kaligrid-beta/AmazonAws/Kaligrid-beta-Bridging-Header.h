@@ -21,5 +21,5 @@
 
 #import <AWSDynamoDB/AWSDynamoDB.h>
 #import <FSCalendar/FSCalendar.h> // 3rd Party Calendar Components
-
+#import "DynamoDBManager.h"
 

@@ -9,7 +9,7 @@
 import UIKit
 
 class NewEventViewController: UIViewController {
-
+    
     @IBOutlet weak var eventTitle: UITextField!
     @IBAction func addAction(sender: AnyObject) {
     }
@@ -18,24 +18,54 @@ class NewEventViewController: UIViewController {
         
         eventTitle.setBottomBorder()
     }
-
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "saveNewEvent" {
+            let tableRow = DDBEventRow();
+            tableRow!.UserId=AWSIdentityManager.sharedInstance().identityId
+            tableRow!.EventsName = self.eventTitle.text
+            
+            if !((self.eventTitle.text ?? "").isEmpty) {
+                self.updateTableRow(tableRow!)
+            } else {
+                let alertController = UIAlertController(title: "Error: Invalid Input", message: "Event name cannot be empty.", preferredStyle: UIAlertControllerStyle.Alert)
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action:UIAlertAction) -> Void in
+                })
+                alertController.addAction(okAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateTableRow(tableRow:DDBEventRow) {
+        let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
+        
+        dynamoDBObjectMapper .save(tableRow) .continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
+            if (task.error == nil) {
+                // Do Nothing
+                
+            } else {
+                print("Error: \(task.error)")
+                
+                let alertController = UIAlertController(title: "Failed to update the data into the table.", message: task.error!.description, preferredStyle: UIAlertControllerStyle.Alert)
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action:UIAlertAction) -> Void in
+                })
+                alertController.addAction(okAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            
+            return nil
+        })
     }
-    */
-
+    
+    
 }
 
 extension UITextField

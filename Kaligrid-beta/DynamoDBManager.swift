@@ -42,3 +42,36 @@ class DDBUserRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
 }
 
 
+class DDBEventRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
+    
+    var UserId:String?
+    var EventId:String? =  "\(NSDate().timeIntervalSince1970)"  // TODO: Set this to unique ID
+    var EventsName:String?
+    var StartTime:String?
+    var EndTime:String?
+    var isAllDay:String? = "Y"
+    var eventType:String? = "\(DDBEventRowType.Event.rawValue)"
+    var location:String?
+    
+    class func dynamoDBTableName() -> String! {
+        return DDBEventsTableName
+    }
+    
+    class func hashKeyAttribute() -> String! {
+        return "UserId"
+    }
+    
+    class func rangeKeyAttribute() -> String! {
+        return "EventId"
+    }
+    
+    //MARK: NSObjectProtocol hack
+    override func isEqual(object: AnyObject?) -> Bool {
+        return super.isEqual(object)
+    }
+    
+    override func `self`() -> Self {
+        return self
+    }
+}
+

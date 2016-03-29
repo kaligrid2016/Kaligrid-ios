@@ -248,7 +248,11 @@
                                                 <segue destination="3Hj-Ou-uGf" kind="unwind" unwindAction="unwindToEventTypeViewController:" id="GRk-eY-jDU"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="SAVE" style="done" id="t0u-Un-wBe"/>
+                                        <barButtonItem key="rightBarButtonItem" title="SAVE" style="done" id="t0u-Un-wBe">
+                                            <connections>
+                                                <segue destination="3Hj-Ou-uGf" kind="unwind" identifier="saveNewEvent" unwindAction="unwindToFirstViewController:" id="RQ7-tG-jts"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -718,9 +722,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRf-98-KWF">
                                 <rect key="frame" x="20" y="77" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="90A-If-QWY" kind="unwind" unwindAction="cancelToSettingViewController:" id="5HN-20-o8r"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Current Display Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd1-Y3-nM9">
                                 <rect key="frame" x="30" y="163" width="168" height="21"/>
@@ -741,9 +742,6 @@
                                     <constraint firstAttribute="width" constant="34" id="y1N-6y-Dly"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
-                                <connections>
-                                    <segue destination="90A-If-QWY" kind="unwind" identifier="SaveAccountSetting" unwindAction="saveSetting:" id="oxg-qq-dKb"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -776,7 +774,18 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="EaA-1h-Ulm"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="av5-fS-kUf"/>
+                    <navigationItem key="navigationItem" id="av5-fS-kUf">
+                        <barButtonItem key="leftBarButtonItem" image="icon_add_cancel.png" id="t0q-Bo-5KS">
+                            <connections>
+                                <segue destination="90A-If-QWY" kind="unwind" unwindAction="cancelToSettingViewController:" id="e9E-Ge-dXO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="2JU-66-KRe">
+                            <connections>
+                                <segue destination="90A-If-QWY" kind="unwind" identifier="SaveAccountSetting" unwindAction="saveSetting:" id="0tW-sG-Nnv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
