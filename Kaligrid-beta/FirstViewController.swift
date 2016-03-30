@@ -9,9 +9,11 @@
 import UIKit
 import FSCalendar
 
-class FirstViewController: UIViewController, FSCalendarDataSource {
+var eventRows:Array<DDBEventRow>?
+
+class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDelegate {
     
-    var eventRows:Array<DDBEventRow>?
+    //var eventRows:Array<DDBEventRow>?
     var lastEvaluatedKey:[NSObject : AnyObject]!
     var  doneLoading = false
     var lock:NSLock?
@@ -81,6 +83,39 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
         
     }
     
+    // set up list table
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return (eventRows?.count)!
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifier = "BasicCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BasicCell
+        let eachevent = eventRows![indexPath.row]
+        // Configure the cell...
+        // display time
+        if eachevent.isAllDay == "Y" {
+            cell.startTimeOutlet.text = "All-day"
+        } else {
+            cell.startTimeOutlet.text = eachevent.StartTime
+        }
+        
+        // set icon image
+        if eachevent.eventType == "\(DDBEventRowType.Event.rawValue)"{
+            cell.self.eventTypeIconOutlet.image = UIImage(named: "icon_front_event.png")
+        }
+        
+        // diaplay event title
+        cell.eventTitleOutlet.text = eachevent.EventsName
+        
+        return cell
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        listTable.reloadData()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -127,13 +162,13 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
             dynamoDBObjectMapper.query(DDBEventRow.self, expression: queryExpression).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
                 
                 if self.lastEvaluatedKey == nil {
-                    self.eventRows?.removeAll(keepCapacity: true)
+                    eventRows?.removeAll(keepCapacity: true)
                 }
                 
                 if task.result != nil {
                     let paginatedOutput = task.result as! AWSDynamoDBPaginatedOutput
                     for item in paginatedOutput.items as! [DDBEventRow] {
-                        self.eventRows?.append(item)
+                        eventRows?.append(item)
                         print(item.EventsName)
                     }
                     
@@ -152,6 +187,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource {
             })
         }
     }
+
     
     /*
     func accessEventRows(){
