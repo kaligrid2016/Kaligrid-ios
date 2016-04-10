@@ -25,6 +25,13 @@ class NewEventViewController: UIViewController {
             let tableRow = DDBEventRow();
             tableRow!.UserId=AWSIdentityManager.sharedInstance().identityId
             tableRow!.EventsName = self.eventTitle.text
+            tableRow!.isAllDay = isAllDayFromDateTable
+            tableRow!.StartTime = fromtimeFromDateTable
+            tableRow!.EndTime = totimeFromDateTable
+            
+            isAllDayFromDateTable="N"
+            fromtimeFromDateTable=""
+            totimeFromDateTable=""
             
             if !((self.eventTitle.text ?? "").isEmpty) {
                 self.updateTableRow(tableRow!)

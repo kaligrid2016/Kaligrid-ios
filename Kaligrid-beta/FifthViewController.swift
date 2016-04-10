@@ -16,14 +16,18 @@ class FifthViewController: UIViewController {
     }*/
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         // Tab bar controller
         let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_me.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_me_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
         self.tabBarItem = customTabBarItem
+        removeTabbarItemText()
+    }
+    
+    func removeTabbarItemText() {
+        self.tabBarItem.title = ""
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
     }
 /*
     override func viewWillAppear(animated: Bool) {

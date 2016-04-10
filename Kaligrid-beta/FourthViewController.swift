@@ -20,6 +20,7 @@ class FourthViewController: UIViewController {
         // Tab bar controller
         let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_friends.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_friends_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
         self.tabBarItem = customTabBarItem
+        removeTabbarItemText()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +28,10 @@ class FourthViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func removeTabbarItemText() {
+        self.tabBarItem.title = ""
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+    }
 
     /*
     // MARK: - Navigation

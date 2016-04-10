@@ -13,7 +13,6 @@ var eventRows:Array<DDBEventRow>?
 
 class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDelegate {
     
-    //var eventRows:Array<DDBEventRow>?
     var lastEvaluatedKey:[NSObject : AnyObject]!
     var  doneLoading = false
     var lock:NSLock?
@@ -34,6 +33,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
         // Bottom Tab Bar Controller
         let customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icon_bottom_list.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "icon_bottom_list_selected.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
         self.tabBarItem = customTabBarItem
+        removeTabbarItemText()
         
         // Calendar Appearance
         self.calendar.appearance.headerMinimumDissolvedAlpha = 0.0
@@ -113,6 +113,12 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
         return cell
     }
     
+    //dynamic row height
+    func configureTableView() {
+        listTable.rowHeight = UITableViewAutomaticDimension
+        listTable.estimatedRowHeight = 20.0
+    }
+    
     override func viewDidAppear(animated: Bool) {
         listTable.reloadData()
     }
@@ -176,29 +182,35 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
                     if paginatedOutput.lastEvaluatedKey == nil {
                         self.doneLoading = true
                     }
+
                 }
                 
-                //self.tableView.reloadData()
+                self.listTable.reloadData()
                 
                 if ((task.error) != nil) {
                     print("Error: \(task.error)")
                 }
                 return nil
             })
-        }
+       }
     }
-
+    
+    func removeTabbarItemText() {
+        self.tabBarItem.title = ""
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+    }
+    
     
     /*
-    func accessEventRows(){
-        for eachevent in self.eventRows! {
-            let name = eachevent.EventsName
-            let startdate = eachevent.StartTime
-            let enddate = eachevent.EndTime
-            
-        }
-        
-    }*/
+     func accessEventRows(){
+     for eachevent in self.eventRows! {
+     let name = eachevent.EventsName
+     let startdate = eachevent.StartTime
+     let enddate = eachevent.EndTime
+     
+     }
+     
+     }*/
     
 }
 

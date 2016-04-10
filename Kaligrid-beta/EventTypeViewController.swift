@@ -47,9 +47,6 @@ class EventTypeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func unwindToEventTypeViewController (sender: UIStoryboardSegue){
-    }
         
     
 }

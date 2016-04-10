@@ -8,35 +8,47 @@
 
 import UIKit
 
+var isAllDayFromDateTable="N"
+var fromtimeFromDateTable=""
+var totimeFromDateTable=""
+
 class DateTableViewController: UITableViewController {
 
+  //  @IBOutlet weak var fromDetail: UILabel!
+   // @IBOutlet weak var fromDetail: UILabel!
+    
     @IBOutlet weak var fromDetail: UILabel!
     @IBOutlet weak var fromDatePicker: UIDatePicker!
     @IBAction func fromDatePickerValue(sender: AnyObject) {
-        fromDatePickerChanged()
+ //       fromDatePickerChanged()
     }
     
+//    @IBOutlet weak var toDetail: UILabel!
+  //  @IBOutlet weak var toDetail: UILabel!
     @IBOutlet weak var toDetail: UILabel!
     @IBOutlet weak var toDatePicker: UIDatePicker!
     @IBAction func toDatePickerValue(sender: AnyObject) {
-        toDatePickerChanged()
+  //      toDatePickerChanged()
     }
     
     @IBOutlet weak var alldaySwitchOutlet: UISwitch!
     @IBOutlet weak var reminderSwitchOutlet: UISwitch!
     
+    
     func fromDatePickerChanged () {
         fromDetail.text = NSDateFormatter.localizedStringFromDate(fromDatePicker.date, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+        fromtimeFromDateTable = fromDetail.text!
     }
     
     func toDatePickerChanged () {
         toDetail.text = NSDateFormatter.localizedStringFromDate(fromDatePicker.date, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+        totimeFromDateTable = toDetail.text!
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.sectionFooterHeight = 12.0;
+        self.tableView.sectionFooterHeight = 0;
         self.tableView.backgroundColor = UIColor.whiteColor()
         fromDatePickerChanged()
         toDatePickerChanged()
@@ -52,18 +64,31 @@ class DateTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Addition of Switches
+        self.alldaySwitchOutlet.setOn(false, animated:true)
+        self.alldaySwitchOutlet.addTarget(self, action: Selector("alldaystateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+
     }
 
+    func alldaystateChanged(switchState: UISwitch) {
+        if switchState.on {
+            isAllDayFromDateTable = "Y"
+        } else {
+            isAllDayFromDateTable = "N"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 && indexPath.row == 1 {
+        if indexPath.section == 0 && indexPath.row == 2 {
             fromToggleDatepicker()
         }
-        if indexPath.section == 0 && indexPath.row == 3 {
+        if indexPath.section == 0 && indexPath.row == 4 {
             toToggleDatepicker()
         }
     }
@@ -79,11 +104,29 @@ class DateTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if fromDatePickerHidden && indexPath.section == 0 && indexPath.row == 2{
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                return 16
+            }
+            if indexPath.row == 1 {
+                return 38
+            }
+            if indexPath.row == 2 || indexPath.row == 4 {
+                return 28
+            }
+            if indexPath.row == 6 || indexPath.row == 8 || indexPath.row == 10 {
+                return 40
+            }
+            if indexPath.row == 7 || indexPath.row == 9 || indexPath.row == 11 {
+                return 26
+            }
+        }
+        
+        if fromDatePickerHidden && indexPath.section == 0 && indexPath.row == 3{
             return 0
         }
         else {
-            if toDatePickerHidden && indexPath.section == 0 && indexPath.row == 4{
+            if toDatePickerHidden && indexPath.section == 0 && indexPath.row == 5{
                 return 0
             }
             return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
@@ -96,7 +139,6 @@ class DateTableViewController: UITableViewController {
         header.textLabel!.textColor = UIColor(red: 245/225, green: 166/225, blue: 35/225, alpha: 1.0)
         header.textLabel!.font = UIFont.boldSystemFontOfSize(16)
         header.contentView.backgroundColor = UIColor.whiteColor()
-    
     }
     
  

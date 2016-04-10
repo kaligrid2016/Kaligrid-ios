@@ -27,7 +27,7 @@ class AccountSettingsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveAccountSetting" {
             self.tableRow!.UserId = AWSIdentityManager.sharedInstance().identityId
-            self.tableRow!.DisplayName = self.displayNameOutlet.text
+            self.tableRow!.DisplayName =   self.displayNameOutlet.text
             self.tableRow!.emailAddress = self.emailAddressOutlet.text
             self.tableRow!.PhoneNumber = self.phoneNumberOutlet.text
             
@@ -50,12 +50,9 @@ class AccountSettingsViewController: UIViewController {
         let strId   = AWSIdentityManager.sharedInstance().identityId
         self.getTableRow(strId)
         
-        /*
         let imageURL = AWSIdentityManager.sharedInstance().imageURL
-        
-        if (imageURL != nil){
-            self.profilePIcture.image=UIImage(named: imageURL.absoluteString) // TODO: Does this work?
-        }*/
+        let imageData = NSData(contentsOfURL: imageURL!)
+        self.profilePIcture.image = UIImage(data: imageData!)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -96,6 +93,7 @@ class AccountSettingsViewController: UIViewController {
                     self.displayNameOutlet.text = self.tableRow!.DisplayName
                     self.emailAddressOutlet.text = self.tableRow!.emailAddress
                     self.phoneNumberOutlet.text = self.tableRow!.PhoneNumber
+                    //self.passwordOutlet.text = AWSIdentityManager.sharedInstance().userName
                 }
             } else {
                 print("Error: \(task.error)")

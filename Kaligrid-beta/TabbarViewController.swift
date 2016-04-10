@@ -24,7 +24,8 @@ class TabbarViewController: UITabBarController {
             
         self.tabBar.items![i].selectedImage = listSelectImage
         self.tabBar.items![i].image = listImage
-        self.tabBar.items![i].title = nil
+        //self.tabBar.items![i].title = nil
+        removeTabbarItemText()
         }
         
         
@@ -48,6 +49,15 @@ class TabbarViewController: UITabBarController {
             let vc = storyboard.instantiateViewControllerWithIdentifier("LogIn")
             self.navigationController?.showViewController(vc, sender: nil)
   //          self.presentViewController(vc, animated: true, completion:nil )
+        }
+    }
+    
+    func removeTabbarItemText() {
+        if let items = tabBar.items {
+            for item in items {
+                item.title = ""
+                item.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+            }
         }
     }
     
