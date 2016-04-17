@@ -15,8 +15,12 @@ class LogInViewController: UIViewController {
     
     var didSignInObserver: AnyObject? = nil
     
+    @IBAction func facebookLogInAction(sender: AnyObject) {
+        self.handleLoginWithSignInProvider(AWSFacebookSignInProvider.sharedInstance())
+    }
+    
     @IBAction func googleLogInAction(sender: AnyObject) {
-                    self.handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
+        self.handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
     }
     
     
@@ -33,9 +37,9 @@ class LogInViewController: UIViewController {
                 weakSelfVC!.dismissViewControllerAnimated(true, completion:nil)
             }
         })
-
+        
     }
-
+    
     
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self.didSignInObserver!)
@@ -46,14 +50,14 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     override func viewDidAppear(animated: Bool) {
         if AWSIdentityManager.defaultIdentityManager().loggedIn{
-          self.performSegueWithIdentifier("login", sender:self)
+            self.performSegueWithIdentifier("login", sender:self)
         }
         
     }
-
+    
     func handleGoogleLogin() {
         self.handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
     }
@@ -61,20 +65,21 @@ class LogInViewController: UIViewController {
     func handleFacebookLogin() {
         self.handleLoginWithSignInProvider(AWSFacebookSignInProvider.sharedInstance())
     }
+
     
     func handleLoginWithSignInProvider(signInProvider: AWSSignInProvider) {
         AWSIdentityManager.defaultIdentityManager().loginWithSignInProvider(signInProvider, completionHandler:
             {(result: AnyObject?, error: NSError?)-> Void in
-            if (error == nil) {
-                //self.performSegueWithIdentifier("login", sender:self)
-                dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                    //self.dismissViewControllerAnimated(true, completion: { _ in })
-                    //self.parentViewController!.dismissViewControllerAnimated(true, completion:nil)
-                    //self.presentViewController(self, animated: true, completion:nil)
- 
-                })
-            }
-            
+                if (error == nil) {
+                    //self.performSegueWithIdentifier("login", sender:self)
+                    dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                        //self.dismissViewControllerAnimated(true, completion: { _ in })
+                        //self.parentViewController!.dismissViewControllerAnimated(true, completion:nil)
+                        //self.presentViewController(self, animated: true, completion:nil)
+                        
+                    })
+                }
+                
                 print("result = \(result), error= \(error)")
         })
     }
