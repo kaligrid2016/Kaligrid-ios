@@ -7,19 +7,19 @@
 //
 
 
+//#import "AWSMobileClient.h"
+//#import "AWSIdentityManager.h"
+
 //#import "AWSConfiguration.h"
-#import "AWSMobileClient.h"
 //#import "AWSContentManager.h"
 //#import "AWSCorePrivateHeader.h"
-#import "AWSIdentityManager.h"
 //#import "AWSGoogleSignInProvider.h"
 //#import "AWSSignInProvider.h"
 //#import "AWSUserFileManager.h"
 //#import "AWSTask+CheckExceptions.h"
-
 //#import <AWSCore/AWSCore.h>
+//#import <AWSDynamoDB/AWSDynamoDB.h>
 
-#import <AWSDynamoDB/AWSDynamoDB.h>
 #import <FSCalendar/FSCalendar.h> // 3rd Party Calendar Components
 #import "DynamoDBManager.h"
 

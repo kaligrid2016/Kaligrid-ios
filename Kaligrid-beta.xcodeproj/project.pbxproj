@@ -11,13 +11,20 @@
 		7A06A0081C852F2000318ED0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06A0071C852F2000318ED0 /* StoreKit.framework */; };
 		7A06A00A1C852F3300318ED0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06A0091C852F3300318ED0 /* AddressBook.framework */; };
 		7A06A00C1C852F3F00318ED0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06A00B1C852F3F00318ED0 /* SystemConfiguration.framework */; };
-		7A072FD71C85074F009CD798 /* AWSMobileClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FC31C85074F009CD798 /* AWSMobileClient.m */; };
-		7A072FD81C85074F009CD798 /* AWSContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FC61C85074F009CD798 /* AWSContentManager.m */; };
-		7A072FD91C85074F009CD798 /* AWSIdentityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FCA1C85074F009CD798 /* AWSIdentityManager.m */; };
-		7A072FDA1C85074F009CD798 /* AWSGoogleSignInProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FCD1C85074F009CD798 /* AWSGoogleSignInProvider.m */; };
-		7A072FDB1C85074F009CD798 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A072FCF1C85074F009CD798 /* Localizable.strings */; };
-		7A072FDC1C85074F009CD798 /* AWSUserFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FD31C85074F009CD798 /* AWSUserFileManager.m */; };
-		7A072FDD1C85074F009CD798 /* AWSTask+CheckExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */; };
+		7A19CE571CC2CB9F00E3B1E0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A19CE561CC2CB9F00E3B1E0 /* SafariServices.framework */; };
+		7A19CE581CC2DCE200E3B1E0 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D91CC2C30300348C4D /* AWSCognito.framework */; };
+		7A19CE591CC2DCE200E3B1E0 /* AWSCognito.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D91CC2C30300348C4D /* AWSCognito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A19CE5B1CC2DCE900E3B1E0 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52DA1CC2C30300348C4D /* AWSDynamoDB.framework */; };
+		7A19CE5D1CC2DCEF00E3B1E0 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D41CC2C2E900348C4D /* AWSMobileAnalytics.framework */; };
+		7A19CE5E1CC2DCEF00E3B1E0 /* AWSMobileAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D41CC2C2E900348C4D /* AWSMobileAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A19CE5F1CC2DCFA00E3B1E0 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D51CC2C2E900348C4D /* AWSS3.framework */; };
+		7A19CE601CC2DCFA00E3B1E0 /* AWSS3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D51CC2C2E900348C4D /* AWSS3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A19CE611CC2DD0300E3B1E0 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D31CC2C2E900348C4D /* AWSCore.framework */; };
+		7A19CE621CC2DD0300E3B1E0 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D31CC2C2E900348C4D /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A19CE661CC2DD3500E3B1E0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A19CE631CC2DD3500E3B1E0 /* FBSDKCoreKit.framework */; };
+		7A19CE671CC2DD3500E3B1E0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A19CE641CC2DD3500E3B1E0 /* FBSDKLoginKit.framework */; };
+		7A19CE681CC2DD3500E3B1E0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A19CE651CC2DD3500E3B1E0 /* FBSDKShareKit.framework */; };
+		7A19CE6A1CC2DD5900E3B1E0 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A19CE691CC2DD5900E3B1E0 /* GoogleSignIn.framework */; };
 		7A2C0ECB1CA8D4870099E85B /* icon_bottom_friends_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C0EC01CA8D4870099E85B /* icon_bottom_friends_selected.png */; };
 		7A2C0ECC1CA8D4870099E85B /* icon_bottom_friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C0EC11CA8D4870099E85B /* icon_bottom_friends.png */; };
 		7A2C0ECD1CA8D4870099E85B /* icon_bottom_grid_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C0EC21CA8D4870099E85B /* icon_bottom_grid_selected.png */; };
@@ -54,6 +61,10 @@
 		7A6B5B5B1CA5DDDC009ED9DE /* EventTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6B5B5A1CA5DDDC009ED9DE /* EventTypeViewController.swift */; };
 		7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CDF1C83EE200074D0C6 /* login_facebook.png */; };
 		7A713CE21C83EE200074D0C6 /* login_google.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE01C83EE200074D0C6 /* login_google.png */; };
+		7A7E17791CC2C7E400792952 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7E17781CC2C7E400792952 /* libsqlite3.tbd */; };
+		7A7E177B1CC2C7ED00792952 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7E177A1CC2C7ED00792952 /* libz.tbd */; };
+		7A7F27221CC3262C003276B5 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */; };
+		7A7F27231CC3262C003276B5 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A7F72481C89356000B7DC29 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72471C89356000B7DC29 /* NewEventViewController.swift */; };
 		7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */; };
 		7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */; };
@@ -62,7 +73,6 @@
 		7A8CD8FB1C7D53D500D462C8 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8FA1C7D53D500D462C8 /* FifthViewController.swift */; };
 		7A9FAA5E1C8FB1D6007CF78D /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9FAA5D1C8FB1D6007CF78D /* FSCalendar.framework */; };
 		7A9FAA681C8FD0BC007CF78D /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FAA671C8FD0BC007CF78D /* AccountSettingsViewController.swift */; };
-		7AB180591C9D5E4600FDCD91 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB180581C9D5E4600FDCD91 /* AWSDynamoDB.framework */; };
 		7AB1805B1C9D5F5500FDCD91 /* DynamoDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1805A1C9D5F5500FDCD91 /* DynamoDBConstants.swift */; };
 		7AB1805E1C9D7A5D00FDCD91 /* DynamoDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1805D1C9D7A5D00FDCD91 /* DynamoDBManager.swift */; };
 		7AB180601C9DEDB800FDCD91 /* SettingUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1805F1C9DEDB800FDCD91 /* SettingUITableViewController.swift */; };
@@ -72,17 +82,35 @@
 		7ACB9E201C7A758C0003A65C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB9E1F1C7A758C0003A65C /* SecondViewController.swift */; };
 		7ACB9E251C7A758C0003A65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB9E241C7A758C0003A65C /* Assets.xcassets */; };
 		7ACB9E281C7A758C0003A65C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB9E261C7A758C0003A65C /* LaunchScreen.storyboard */; };
+		7AEE52CC1CC2C12300348C4D /* Aws in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE52C91CC2C12300348C4D /* Aws */; };
+		7AEE52CD1CC2C12300348C4D /* Facebook in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE52CA1CC2C12300348C4D /* Facebook */; };
+		7AEE52CE1CC2C12300348C4D /* Google in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE52CB1CC2C12300348C4D /* Google */; };
+		7AEE52D11CC2C19600348C4D /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE52CF1CC2C19600348C4D /* AWSMobileClient.swift */; };
+		7AEE52D21CC2C19600348C4D /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D01CC2C19600348C4D /* AWSMobileHubHelper.framework */; };
+		7AEE52D61CC2C2E900348C4D /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D31CC2C2E900348C4D /* AWSCore.framework */; };
+		7AEE52D71CC2C2E900348C4D /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D41CC2C2E900348C4D /* AWSMobileAnalytics.framework */; };
+		7AEE52D81CC2C2E900348C4D /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D51CC2C2E900348C4D /* AWSS3.framework */; };
+		7AEE52DB1CC2C30300348C4D /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D91CC2C30300348C4D /* AWSCognito.framework */; };
 		7AF00BA91C800D0E00FB22E3 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF00BA81C800D0E00FB22E3 /* TabbarViewController.swift */; };
-		7AF9F3711C852AE600F14B38 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF9F3661C852AE600F14B38 /* AWSCore.framework */; };
-		7AF9F3721C852AE600F14B38 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF9F3671C852AE600F14B38 /* AWSMobileAnalytics.framework */; };
-		7AF9F3731C852AE600F14B38 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF9F3681C852AE600F14B38 /* AWSS3.framework */; };
-		7AF9F3741C852AE600F14B38 /* Amazon Software License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9F36A1C852AE600F14B38 /* Amazon Software License.txt */; };
-		7AF9F3751C852AE600F14B38 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF9F36B1C852AE600F14B38 /* AWSCognito.framework */; };
-		7AF9F3761C852AE600F14B38 /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9F36C1C852AE600F14B38 /* NOTICE */; };
-		7AF9F3771C852AE600F14B38 /* CheckXcodeVersion.sh in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9F36D1C852AE600F14B38 /* CheckXcodeVersion.sh */; };
-		7AF9F3781C852AE600F14B38 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9F36F1C852AE600F14B38 /* GoogleSignIn.bundle */; };
-		7AF9F3791C852AE600F14B38 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF9F3701C852AE600F14B38 /* GoogleSignIn.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A19CE5A1CC2DCE200E3B1E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7A19CE601CC2DCFA00E3B1E0 /* AWSS3.framework in Embed Frameworks */,
+				7A19CE621CC2DD0300E3B1E0 /* AWSCore.framework in Embed Frameworks */,
+				7A19CE5E1CC2DCEF00E3B1E0 /* AWSMobileAnalytics.framework in Embed Frameworks */,
+				7A19CE591CC2DCE200E3B1E0 /* AWSCognito.framework in Embed Frameworks */,
+				7A7F27231CC3262C003276B5 /* AWSDynamoDB.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5FF018EEB159018DB9D1A7DE /* Pods-Kaligrid-beta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaligrid-beta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaligrid-beta/Pods-Kaligrid-beta.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,22 +119,11 @@
 		7A06A0091C852F3300318ED0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		7A06A00B1C852F3F00318ED0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7A06A00D1C8533A400318ED0 /* Kaligrid-beta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Kaligrid-beta-Bridging-Header.h"; path = "AmazonAws/Kaligrid-beta-Bridging-Header.h"; sourceTree = "<group>"; };
-		7A072FC11C85074F009CD798 /* AWSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSConfiguration.h; sourceTree = "<group>"; };
-		7A072FC21C85074F009CD798 /* AWSMobileClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSMobileClient.h; sourceTree = "<group>"; };
-		7A072FC31C85074F009CD798 /* AWSMobileClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSMobileClient.m; sourceTree = "<group>"; };
-		7A072FC51C85074F009CD798 /* AWSContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSContentManager.h; sourceTree = "<group>"; };
-		7A072FC61C85074F009CD798 /* AWSContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSContentManager.m; sourceTree = "<group>"; };
-		7A072FC71C85074F009CD798 /* AWSCorePrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSCorePrivateHeader.h; sourceTree = "<group>"; };
-		7A072FC91C85074F009CD798 /* AWSIdentityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSIdentityManager.h; sourceTree = "<group>"; };
-		7A072FCA1C85074F009CD798 /* AWSIdentityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSIdentityManager.m; sourceTree = "<group>"; };
-		7A072FCC1C85074F009CD798 /* AWSGoogleSignInProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSGoogleSignInProvider.h; sourceTree = "<group>"; };
-		7A072FCD1C85074F009CD798 /* AWSGoogleSignInProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSGoogleSignInProvider.m; sourceTree = "<group>"; };
-		7A072FCE1C85074F009CD798 /* AWSSignInProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSSignInProvider.h; sourceTree = "<group>"; };
-		7A072FD01C85074F009CD798 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7A072FD21C85074F009CD798 /* AWSUserFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSUserFileManager.h; sourceTree = "<group>"; };
-		7A072FD31C85074F009CD798 /* AWSUserFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSUserFileManager.m; sourceTree = "<group>"; };
-		7A072FD51C85074F009CD798 /* AWSTask+CheckExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AWSTask+CheckExceptions.h"; sourceTree = "<group>"; };
-		7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AWSTask+CheckExceptions.m"; sourceTree = "<group>"; };
+		7A19CE561CC2CB9F00E3B1E0 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		7A19CE631CC2DD3500E3B1E0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Kaligrid-beta/Sdk/Facebook/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		7A19CE641CC2DD3500E3B1E0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Kaligrid-beta/Sdk/Facebook/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		7A19CE651CC2DD3500E3B1E0 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Kaligrid-beta/Sdk/Facebook/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		7A19CE691CC2DD5900E3B1E0 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = "Kaligrid-beta/Sdk/Google/GoogleSignIn.framework"; sourceTree = "<group>"; };
 		7A27BD9F1CAA097600118A5E /* DynamoDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamoDBManager.h; sourceTree = "<group>"; };
 		7A2C0EC01CA8D4870099E85B /* icon_bottom_friends_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_bottom_friends_selected.png; path = "../../../Downloads/OneDrive-2016-03-27/icon_bottom_friends_selected.png"; sourceTree = "<group>"; };
 		7A2C0EC11CA8D4870099E85B /* icon_bottom_friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_bottom_friends.png; path = "../../../Downloads/OneDrive-2016-03-27/icon_bottom_friends.png"; sourceTree = "<group>"; };
@@ -144,6 +161,9 @@
 		7A6B5B5A1CA5DDDC009ED9DE /* EventTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeViewController.swift; sourceTree = "<group>"; };
 		7A713CDF1C83EE200074D0C6 /* login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_facebook.png; sourceTree = "<group>"; };
 		7A713CE01C83EE200074D0C6 /* login_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_google.png; sourceTree = "<group>"; };
+		7A7E17781CC2C7E400792952 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7A7E177A1CC2C7ED00792952 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "Kaligrid-beta/Sdk/Aws/extras/AWSDynamoDB.framework"; sourceTree = "<group>"; };
 		7A7F72471C89356000B7DC29 /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +172,6 @@
 		7A8CD8FA1C7D53D500D462C8 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		7A9FAA5D1C8FB1D6007CF78D /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = "../../Library/Developer/Xcode/DerivedData/Kaligrid-beta-atzpmeywtkpiapgegppdsjxbkgrj/Build/Products/Debug-iphonesimulator/FSCalendar.framework"; sourceTree = "<group>"; };
 		7A9FAA671C8FD0BC007CF78D /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
-		7AB180581C9D5E4600FDCD91 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
 		7AB1805A1C9D5F5500FDCD91 /* DynamoDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBConstants.swift; sourceTree = "<group>"; };
 		7AB1805D1C9D7A5D00FDCD91 /* DynamoDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBManager.swift; sourceTree = "<group>"; };
 		7AB1805F1C9DEDB800FDCD91 /* SettingUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingUITableViewController.swift; sourceTree = "<group>"; };
@@ -164,16 +183,17 @@
 		7ACB9E241C7A758C0003A65C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ACB9E271C7A758C0003A65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ACB9E291C7A758C0003A65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AEE52C91CC2C12300348C4D /* Aws */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Aws; sourceTree = "<group>"; };
+		7AEE52CA1CC2C12300348C4D /* Facebook */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Facebook; sourceTree = "<group>"; };
+		7AEE52CB1CC2C12300348C4D /* Google */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Google; sourceTree = "<group>"; };
+		7AEE52CF1CC2C19600348C4D /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		7AEE52D01CC2C19600348C4D /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		7AEE52D31CC2C2E900348C4D /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = "Kaligrid-beta/Sdk/Aws/AWSCore.framework"; sourceTree = "<group>"; };
+		7AEE52D41CC2C2E900348C4D /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSMobileAnalytics.framework; path = "Kaligrid-beta/Sdk/Aws/AWSMobileAnalytics.framework"; sourceTree = "<group>"; };
+		7AEE52D51CC2C2E900348C4D /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "Kaligrid-beta/Sdk/Aws/AWSS3.framework"; sourceTree = "<group>"; };
+		7AEE52D91CC2C30300348C4D /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = "Kaligrid-beta/Sdk/Aws/extras/AWSCognito.framework"; sourceTree = "<group>"; };
+		7AEE52DA1CC2C30300348C4D /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "Kaligrid-beta/Sdk/Aws/extras/AWSDynamoDB.framework"; sourceTree = "<group>"; };
 		7AF00BA81C800D0E00FB22E3 /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
-		7AF9F3661C852AE600F14B38 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
-		7AF9F3671C852AE600F14B38 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileAnalytics.framework; sourceTree = "<group>"; };
-		7AF9F3681C852AE600F14B38 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
-		7AF9F36A1C852AE600F14B38 /* Amazon Software License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Amazon Software License.txt"; sourceTree = "<group>"; };
-		7AF9F36B1C852AE600F14B38 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
-		7AF9F36C1C852AE600F14B38 /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
-		7AF9F36D1C852AE600F14B38 /* CheckXcodeVersion.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CheckXcodeVersion.sh; sourceTree = "<group>"; };
-		7AF9F36F1C852AE600F14B38 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
-		7AF9F3701C852AE600F14B38 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		9EC5EBDDBB4380249870EA3A /* Pods_Kaligrid_beta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaligrid_beta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -182,23 +202,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A19CE6A1CC2DD5900E3B1E0 /* GoogleSignIn.framework in Frameworks */,
+				7A19CE661CC2DD3500E3B1E0 /* FBSDKCoreKit.framework in Frameworks */,
+				7A19CE671CC2DD3500E3B1E0 /* FBSDKLoginKit.framework in Frameworks */,
+				7A19CE681CC2DD3500E3B1E0 /* FBSDKShareKit.framework in Frameworks */,
+				7A7F27221CC3262C003276B5 /* AWSDynamoDB.framework in Frameworks */,
+				7A06A00C1C852F3F00318ED0 /* SystemConfiguration.framework in Frameworks */,
+				7A06A0081C852F2000318ED0 /* StoreKit.framework in Frameworks */,
+				7A19CE571CC2CB9F00E3B1E0 /* SafariServices.framework in Frameworks */,
+				7A06A00A1C852F3300318ED0 /* AddressBook.framework in Frameworks */,
+				7A7E177B1CC2C7ED00792952 /* libz.tbd in Frameworks */,
+				7A7E17791CC2C7E400792952 /* libsqlite3.tbd in Frameworks */,
+				7A19CE611CC2DD0300E3B1E0 /* AWSCore.framework in Frameworks */,
+				7A19CE581CC2DCE200E3B1E0 /* AWSCognito.framework in Frameworks */,
+				7AEE52DB1CC2C30300348C4D /* AWSCognito.framework in Frameworks */,
+				7A19CE5F1CC2DCFA00E3B1E0 /* AWSS3.framework in Frameworks */,
+				7AEE52D61CC2C2E900348C4D /* AWSCore.framework in Frameworks */,
+				7AEE52D71CC2C2E900348C4D /* AWSMobileAnalytics.framework in Frameworks */,
+				7A19CE5B1CC2DCE900E3B1E0 /* AWSDynamoDB.framework in Frameworks */,
+				7AEE52D81CC2C2E900348C4D /* AWSS3.framework in Frameworks */,
 				7A9FAA5E1C8FB1D6007CF78D /* FSCalendar.framework in Frameworks */,
 				7A52A4581C86A62300CAC30A /* AssetsLibrary.framework in Frameworks */,
 				7A52A4561C86A61400CAC30A /* MediaPlayer.framework in Frameworks */,
 				7A52A4541C86A60600CAC30A /* Security.framework in Frameworks */,
-				7AB180591C9D5E4600FDCD91 /* AWSDynamoDB.framework in Frameworks */,
+				7AEE52D21CC2C19600348C4D /* AWSMobileHubHelper.framework in Frameworks */,
 				7A52A4521C86A5F900CAC30A /* CoreMotion.framework in Frameworks */,
+				7A19CE5D1CC2DCEF00E3B1E0 /* AWSMobileAnalytics.framework in Frameworks */,
 				7A52A4501C86A5EA00CAC30A /* CoreLocation.framework in Frameworks */,
 				7A52A44E1C86A5D200CAC30A /* UIKit.framework in Frameworks */,
 				7A52A44C1C86A5C100CAC30A /* Foundation.framework in Frameworks */,
-				7A06A00C1C852F3F00318ED0 /* SystemConfiguration.framework in Frameworks */,
-				7A06A00A1C852F3300318ED0 /* AddressBook.framework in Frameworks */,
-				7A06A0081C852F2000318ED0 /* StoreKit.framework in Frameworks */,
-				7AF9F3711C852AE600F14B38 /* AWSCore.framework in Frameworks */,
-				7AF9F3721C852AE600F14B38 /* AWSMobileAnalytics.framework in Frameworks */,
-				7AF9F3751C852AE600F14B38 /* AWSCognito.framework in Frameworks */,
-				7AF9F3731C852AE600F14B38 /* AWSS3.framework in Frameworks */,
-				7AF9F3791C852AE600F14B38 /* GoogleSignIn.framework in Frameworks */,
 				2810EAB9C753D6417C050D86 /* Pods_Kaligrid_beta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +250,18 @@
 		60B9255C16E36510668B6A19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A19CE691CC2DD5900E3B1E0 /* GoogleSignIn.framework */,
+				7A19CE631CC2DD3500E3B1E0 /* FBSDKCoreKit.framework */,
+				7A19CE641CC2DD3500E3B1E0 /* FBSDKLoginKit.framework */,
+				7A19CE651CC2DD3500E3B1E0 /* FBSDKShareKit.framework */,
+				7A19CE561CC2CB9F00E3B1E0 /* SafariServices.framework */,
+				7A7E177A1CC2C7ED00792952 /* libz.tbd */,
+				7A7E17781CC2C7E400792952 /* libsqlite3.tbd */,
+				7AEE52D91CC2C30300348C4D /* AWSCognito.framework */,
+				7AEE52DA1CC2C30300348C4D /* AWSDynamoDB.framework */,
+				7AEE52D31CC2C2E900348C4D /* AWSCore.framework */,
+				7AEE52D41CC2C2E900348C4D /* AWSMobileAnalytics.framework */,
+				7AEE52D51CC2C2E900348C4D /* AWSS3.framework */,
 				7A9FAA5D1C8FB1D6007CF78D /* FSCalendar.framework */,
 				9EC5EBDDBB4380249870EA3A /* Pods_Kaligrid_beta.framework */,
 			);
@@ -227,64 +271,10 @@
 		7A072FC01C85074F009CD798 /* AmazonAws */ = {
 			isa = PBXGroup;
 			children = (
-				7A072FC11C85074F009CD798 /* AWSConfiguration.h */,
-				7A072FC21C85074F009CD798 /* AWSMobileClient.h */,
-				7A072FC31C85074F009CD798 /* AWSMobileClient.m */,
-				7A072FC41C85074F009CD798 /* ContentDelivery */,
-				7A072FC81C85074F009CD798 /* Identity */,
-				7A072FCB1C85074F009CD798 /* SignIn */,
-				7A072FD11C85074F009CD798 /* UserFiles */,
-				7A072FD41C85074F009CD798 /* Utils */,
+				7AEE52CF1CC2C19600348C4D /* AWSMobileClient.swift */,
+				7AEE52D01CC2C19600348C4D /* AWSMobileHubHelper.framework */,
 			);
 			path = AmazonAws;
-			sourceTree = "<group>";
-		};
-		7A072FC41C85074F009CD798 /* ContentDelivery */ = {
-			isa = PBXGroup;
-			children = (
-				7A072FC51C85074F009CD798 /* AWSContentManager.h */,
-				7A072FC61C85074F009CD798 /* AWSContentManager.m */,
-				7A072FC71C85074F009CD798 /* AWSCorePrivateHeader.h */,
-			);
-			path = ContentDelivery;
-			sourceTree = "<group>";
-		};
-		7A072FC81C85074F009CD798 /* Identity */ = {
-			isa = PBXGroup;
-			children = (
-				7A072FC91C85074F009CD798 /* AWSIdentityManager.h */,
-				7A072FCA1C85074F009CD798 /* AWSIdentityManager.m */,
-			);
-			path = Identity;
-			sourceTree = "<group>";
-		};
-		7A072FCB1C85074F009CD798 /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				7A072FCC1C85074F009CD798 /* AWSGoogleSignInProvider.h */,
-				7A072FCD1C85074F009CD798 /* AWSGoogleSignInProvider.m */,
-				7A072FCE1C85074F009CD798 /* AWSSignInProvider.h */,
-				7A072FCF1C85074F009CD798 /* Localizable.strings */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		7A072FD11C85074F009CD798 /* UserFiles */ = {
-			isa = PBXGroup;
-			children = (
-				7A072FD21C85074F009CD798 /* AWSUserFileManager.h */,
-				7A072FD31C85074F009CD798 /* AWSUserFileManager.m */,
-			);
-			path = UserFiles;
-			sourceTree = "<group>";
-		};
-		7A072FD41C85074F009CD798 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				7A072FD51C85074F009CD798 /* AWSTask+CheckExceptions.h */,
-				7A072FD61C85074F009CD798 /* AWSTask+CheckExceptions.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		7A5824131CAB71C300B7C886 /* Smallicons */ = {
@@ -384,6 +374,7 @@
 		7ACB9E0F1C7A758C0003A65C = {
 			isa = PBXGroup;
 			children = (
+				7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */,
 				7ACB9E1A1C7A758C0003A65C /* Kaligrid-beta */,
 				7ACB9E191C7A758C0003A65C /* Products */,
 				2063CE415E88FBC7F5E11C1C /* Pods */,
@@ -422,6 +413,9 @@
 		7AF9F3641C852AE600F14B38 /* Sdk */ = {
 			isa = PBXGroup;
 			children = (
+				7AEE52C91CC2C12300348C4D /* Aws */,
+				7AEE52CA1CC2C12300348C4D /* Facebook */,
+				7AEE52CB1CC2C12300348C4D /* Google */,
 				7A52A44B1C86A5C100CAC30A /* Foundation.framework */,
 				7A52A44D1C86A5D200CAC30A /* UIKit.framework */,
 				7A52A44F1C86A5EA00CAC30A /* CoreLocation.framework */,
@@ -432,42 +426,8 @@
 				7A06A00B1C852F3F00318ED0 /* SystemConfiguration.framework */,
 				7A06A0091C852F3300318ED0 /* AddressBook.framework */,
 				7A06A0071C852F2000318ED0 /* StoreKit.framework */,
-				7AF9F3651C852AE600F14B38 /* Aws */,
-				7AF9F36D1C852AE600F14B38 /* CheckXcodeVersion.sh */,
-				7AF9F36E1C852AE600F14B38 /* Google */,
 			);
 			path = Sdk;
-			sourceTree = "<group>";
-		};
-		7AF9F3651C852AE600F14B38 /* Aws */ = {
-			isa = PBXGroup;
-			children = (
-				7AB180581C9D5E4600FDCD91 /* AWSDynamoDB.framework */,
-				7AF9F3661C852AE600F14B38 /* AWSCore.framework */,
-				7AF9F3671C852AE600F14B38 /* AWSMobileAnalytics.framework */,
-				7AF9F3681C852AE600F14B38 /* AWSS3.framework */,
-				7AF9F3691C852AE600F14B38 /* extras */,
-			);
-			path = Aws;
-			sourceTree = "<group>";
-		};
-		7AF9F3691C852AE600F14B38 /* extras */ = {
-			isa = PBXGroup;
-			children = (
-				7AF9F36A1C852AE600F14B38 /* Amazon Software License.txt */,
-				7AF9F36B1C852AE600F14B38 /* AWSCognito.framework */,
-				7AF9F36C1C852AE600F14B38 /* NOTICE */,
-			);
-			path = extras;
-			sourceTree = "<group>";
-		};
-		7AF9F36E1C852AE600F14B38 /* Google */ = {
-			isa = PBXGroup;
-			children = (
-				7AF9F36F1C852AE600F14B38 /* GoogleSignIn.bundle */,
-				7AF9F3701C852AE600F14B38 /* GoogleSignIn.framework */,
-			);
-			path = Google;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +443,7 @@
 				7ACB9E161C7A758C0003A65C /* Resources */,
 				D5C300155D2C4354DB742D05 /* Embed Pods Frameworks */,
 				E33F7FF7EA50E56E7E649209 /* Copy Pods Resources */,
+				7A19CE5A1CC2DCE200E3B1E0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -533,6 +494,7 @@
 			files = (
 				7A6B5B531CA4D6D5009ED9DE /* icon_pic_blue.png in Resources */,
 				7A2C0ECC1CA8D4870099E85B /* icon_bottom_friends.png in Resources */,
+				7AEE52CD1CC2C12300348C4D /* Facebook in Resources */,
 				7AB180671C9DEFDD00FDCD91 /* Main.storyboard in Resources */,
 				7A713CE21C83EE200074D0C6 /* login_google.png in Resources */,
 				7A2C0ECB1CA8D4870099E85B /* icon_bottom_friends_selected.png in Resources */,
@@ -541,7 +503,6 @@
 				7A6B5B4A1CA4D6D5009ED9DE /* icon_add_cancel.png in Resources */,
 				7A2C0ECF1CA8D4870099E85B /* icon_bottom_kali_selected.png in Resources */,
 				7A2C0ED21CA8D4870099E85B /* icon_bottom_list.png in Resources */,
-				7AF9F3741C852AE600F14B38 /* Amazon Software License.txt in Resources */,
 				7A6B5B511CA4D6D5009ED9DE /* icon_new_reminder.png in Resources */,
 				7A2C0ECD1CA8D4870099E85B /* icon_bottom_grid_selected.png in Resources */,
 				7A5824151CAB71F600B7C886 /* icon_front_event.png in Resources */,
@@ -550,21 +511,19 @@
 				7A2C0ECE1CA8D4870099E85B /* icon_bottom_grid.png in Resources */,
 				7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */,
 				7A6B5B551CA4D6D5009ED9DE /* icon_pic_red.png in Resources */,
-				7AF9F3781C852AE600F14B38 /* GoogleSignIn.bundle in Resources */,
 				7A6B5B4C1CA4D6D5009ED9DE /* icon_location_orange.png in Resources */,
 				7A2C0ED41CA8D4870099E85B /* icon_bottom_me.png in Resources */,
 				7A6B5B4D1CA4D6D5009ED9DE /* icon_location_red.png in Resources */,
 				7ACB9E281C7A758C0003A65C /* LaunchScreen.storyboard in Resources */,
 				7A6B5B4E1CA4D6D5009ED9DE /* icon_new_cancel.png in Resources */,
-				7A072FDB1C85074F009CD798 /* Localizable.strings in Resources */,
-				7AF9F3761C852AE600F14B38 /* NOTICE in Resources */,
 				7A6B5B541CA4D6D5009ED9DE /* icon_pic_orange.png in Resources */,
-				7AF9F3771C852AE600F14B38 /* CheckXcodeVersion.sh in Resources */,
+				7AEE52CC1CC2C12300348C4D /* Aws in Resources */,
 				7A2C0ED01CA8D4870099E85B /* icon_bottom_kali.png in Resources */,
 				7ACB9E251C7A758C0003A65C /* Assets.xcassets in Resources */,
 				7A2C0ED11CA8D4870099E85B /* icon_bottom_list_selected.png in Resources */,
 				7A6B5B521CA4D6D5009ED9DE /* icon_new.png in Resources */,
 				7A6B5B501CA4D6D5009ED9DE /* icon_new_fyi.png in Resources */,
+				7AEE52CE1CC2C12300348C4D /* Google in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,24 +583,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5824121CAB6B1200B7C886 /* BasicCell.swift in Sources */,
-				7A072FDC1C85074F009CD798 /* AWSUserFileManager.m in Sources */,
 				7AF00BA91C800D0E00FB22E3 /* TabbarViewController.swift in Sources */,
-				7A072FD81C85074F009CD798 /* AWSContentManager.m in Sources */,
 				7A6B5B5B1CA5DDDC009ED9DE /* EventTypeViewController.swift in Sources */,
 				7AB1805E1C9D7A5D00FDCD91 /* DynamoDBManager.swift in Sources */,
 				7A8CD8F91C7D53C400D462C8 /* FourthViewController.swift in Sources */,
 				7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */,
 				7ACB9E201C7A758C0003A65C /* SecondViewController.swift in Sources */,
 				7A8CD8F71C7D53B100D462C8 /* ThirdViewController.swift in Sources */,
+				7AEE52D11CC2C19600348C4D /* AWSMobileClient.swift in Sources */,
 				7A7F72481C89356000B7DC29 /* NewEventViewController.swift in Sources */,
 				7ACB9E1C1C7A758C0003A65C /* AppDelegate.swift in Sources */,
-				7A072FDA1C85074F009CD798 /* AWSGoogleSignInProvider.m in Sources */,
-				7A072FD91C85074F009CD798 /* AWSIdentityManager.m in Sources */,
 				7AB1805B1C9D5F5500FDCD91 /* DynamoDBConstants.swift in Sources */,
-				7A072FD71C85074F009CD798 /* AWSMobileClient.m in Sources */,
 				7A3033801C9E20E7009DC957 /* PrivacySettingTableViewController.swift in Sources */,
 				7A9FAA681C8FD0BC007CF78D /* AccountSettingsViewController.swift in Sources */,
-				7A072FDD1C85074F009CD798 /* AWSTask+CheckExceptions.m in Sources */,
 				7AB180601C9DEDB800FDCD91 /* SettingUITableViewController.swift in Sources */,
 				7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */,
 				7ACB9E1E1C7A758C0003A65C /* FirstViewController.swift in Sources */,
@@ -652,14 +606,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7A072FCF1C85074F009CD798 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A072FD01C85074F009CD798 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		7AB180651C9DEFDD00FDCD91 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -775,10 +721,17 @@
 					"$(PROJECT_DIR)/Kaligrid-beta/Framework/Aws",
 					"$(PROJECT_DIR)/Kaligrid-beta/Framework/Aws/extras",
 					"$(PROJECT_DIR)/Kaligrid-beta/Framework/Google",
+					"$(PROJECT_DIR)/AWS",
+					SDK,
+					"$(PROJECT_DIR)/Kaligrid-beta/AmazonAws",
+					"$(PROJECT_DIR)/Kaligrid-beta/Sdk/Facebook",
 				);
 				INFOPLIST_FILE = "Kaligrid-beta/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/Kaligrid-beta/Sdk/Google/GoogleSignIn.framework/GoogleSignIn",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appfish.Kaligrid-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kaligrid/Documents/Kaligrid-beta/Kaligrid-beta/AmazonAws/Kaligrid-beta-Bridging-Header.h";
@@ -798,10 +751,17 @@
 					"$(PROJECT_DIR)/Kaligrid-beta/Framework/Aws",
 					"$(PROJECT_DIR)/Kaligrid-beta/Framework/Aws/extras",
 					"$(PROJECT_DIR)/Kaligrid-beta/Framework/Google",
+					"$(PROJECT_DIR)/AWS",
+					SDK,
+					"$(PROJECT_DIR)/Kaligrid-beta/AmazonAws",
+					"$(PROJECT_DIR)/Kaligrid-beta/Sdk/Facebook",
 				);
 				INFOPLIST_FILE = "Kaligrid-beta/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/Kaligrid-beta/Sdk/Google/GoogleSignIn.framework/GoogleSignIn",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appfish.Kaligrid-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kaligrid/Documents/Kaligrid-beta/Kaligrid-beta/AmazonAws/Kaligrid-beta-Bridging-Header.h";

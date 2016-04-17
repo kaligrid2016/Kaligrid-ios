@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import AWSDynamoDB
 
-let CognitoRegionType =   AWSRegionType.USEast1
+let CognitoRegionType =    AWSRegionType.USEast1
 let DefaultServiceRegionType = AWSRegionType.USEast1
 let CognitoIdentityPoolId = "us-east-1:58142265-5a45-41d1-98ff-7b6452831618"
 let DDBUserTableName = "UserSetting"

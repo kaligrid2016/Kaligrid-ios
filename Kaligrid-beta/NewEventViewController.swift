@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSMobileHubHelper
+import AWSDynamoDB
 
 class NewEventViewController: UIViewController {
     
@@ -23,7 +25,7 @@ class NewEventViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "saveNewEvent" {
             let tableRow = DDBEventRow();
-            tableRow!.UserId=AWSIdentityManager.sharedInstance().identityId
+            tableRow!.UserId=AWSIdentityManager.defaultIdentityManager().identityId
             tableRow!.EventsName = self.eventTitle.text
             tableRow!.isAllDay = isAllDayFromDateTable
             tableRow!.StartTime = fromtimeFromDateTable

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSMobileHubHelper
 
 var LOG_TAG = [String]();
 
@@ -15,7 +16,7 @@ class LogInViewController: UIViewController {
     var didSignInObserver: AnyObject? = nil
     
     @IBAction func googleLogInAction(sender: AnyObject) {
-                    self.handleLoginWithSignInProvider(AWSSignInProviderType.Google)
+                    self.handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
     }
     
     
@@ -26,7 +27,7 @@ class LogInViewController: UIViewController {
         
         
         
-        self.didSignInObserver = NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification, object: AWSIdentityManager.sharedInstance(), queue: NSOperationQueue.mainQueue(), usingBlock: {(note: NSNotification) -> Void in
+        self.didSignInObserver = NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification, object: AWSIdentityManager.defaultIdentityManager(), queue: NSOperationQueue.mainQueue(), usingBlock: {(note: NSNotification) -> Void in
             let weakSelfVC = weakSelf?.presentingViewController
             if weakSelfVC != nil{
                 weakSelfVC!.dismissViewControllerAnimated(true, completion:nil)
@@ -47,19 +48,23 @@ class LogInViewController: UIViewController {
     
 
     override func viewDidAppear(animated: Bool) {
-        if AWSIdentityManager.sharedInstance().loggedIn{
+        if AWSIdentityManager.defaultIdentityManager().loggedIn{
           self.performSegueWithIdentifier("login", sender:self)
         }
         
     }
 
     func handleGoogleLogin() {
-        self.handleLoginWithSignInProvider(AWSSignInProviderType.Google)
+        self.handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
     }
     
-    func handleLoginWithSignInProvider(signInProviderType: AWSSignInProviderType) {
-        AWSIdentityManager.sharedInstance().loginWithSignInProvider(signInProviderType, completionHandler:
-            {(result: AnyObject!, error: NSError!) in
+    func handleFacebookLogin() {
+        self.handleLoginWithSignInProvider(AWSFacebookSignInProvider.sharedInstance())
+    }
+    
+    func handleLoginWithSignInProvider(signInProvider: AWSSignInProvider) {
+        AWSIdentityManager.defaultIdentityManager().loginWithSignInProvider(signInProvider, completionHandler:
+            {(result: AnyObject?, error: NSError?)-> Void in
             if (error == nil) {
                 //self.performSegueWithIdentifier("login", sender:self)
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in

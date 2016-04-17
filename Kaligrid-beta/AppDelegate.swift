@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSCognito
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,12 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // End of DynamoDB
 
         // Beginning of Login
-        return AWSMobileClient.sharedInstance().didFinishLaunching(application, withOptions: launchOptions)
+        return AWSMobileClient.sharedInstance.didFinishLaunching(application, withOptions: launchOptions)
         // End of Login
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return AWSMobileClient.sharedInstance().withApplication(application, withURL: url, withSourceApplication: sourceApplication, withAnnotation: annotation)
+        return AWSMobileClient.sharedInstance.withApplication(application, withURL: url, withSourceApplication: sourceApplication, withAnnotation: annotation)
     }
     
 
@@ -53,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        AWSMobileClient.sharedInstance().applicationDidBecomeActive(application)
+        AWSMobileClient.sharedInstance.applicationDidBecomeActive(application)
     }
 
     func applicationWillTerminate(application: UIApplication) {

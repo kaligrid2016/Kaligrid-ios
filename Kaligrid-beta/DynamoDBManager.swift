@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AWSDynamoDB
 
 class DDBUserRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSMobileHubHelper
 
 class TabbarViewController: UITabBarController {
 
@@ -44,7 +45,7 @@ class TabbarViewController: UITabBarController {
     
     func presentSignInViewController() {
         
-        if !AWSIdentityManager.sharedInstance().loggedIn {
+        if !AWSIdentityManager.defaultIdentityManager().loggedIn {
             let storyboard: UIStoryboard = UIStoryboard(name: "LogIn", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("LogIn")
             self.navigationController?.showViewController(vc, sender: nil)

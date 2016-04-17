@@ -8,6 +8,8 @@
 
 import UIKit
 import FSCalendar
+import AWSMobileHubHelper
+import AWSDynamoDB
 
 var eventRows:Array<DDBEventRow>?
 
@@ -162,7 +164,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
             let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
             let queryExpression = AWSDynamoDBQueryExpression()
             queryExpression.hashKeyAttribute = "UserId"
-            queryExpression.hashKeyValues = AWSIdentityManager.sharedInstance().identityId
+            queryExpression.hashKeyValues = AWSIdentityManager.defaultIdentityManager().identityId
             queryExpression.exclusiveStartKey = self.lastEvaluatedKey
             queryExpression.limit = 20;
             dynamoDBObjectMapper.query(DDBEventRow.self, expression: queryExpression).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSMobileHubHelper
+import AWSDynamoDB
 
 class AccountSettingsViewController: UIViewController {
     
@@ -26,7 +28,7 @@ class AccountSettingsViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveAccountSetting" {
-            self.tableRow!.UserId = AWSIdentityManager.sharedInstance().identityId
+            self.tableRow!.UserId = AWSIdentityManager.defaultIdentityManager().identityId
             self.tableRow!.DisplayName =   self.displayNameOutlet.text
             self.tableRow!.emailAddress = self.emailAddressOutlet.text
             self.tableRow!.PhoneNumber = self.phoneNumberOutlet.text
@@ -47,10 +49,10 @@ class AccountSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let strId   = AWSIdentityManager.sharedInstance().identityId
-        self.getTableRow(strId)
+        let strId   = AWSIdentityManager.defaultIdentityManager().identityId
+        self.getTableRow(strId!)
         
-        let imageURL = AWSIdentityManager.sharedInstance().imageURL
+        let imageURL = AWSIdentityManager.defaultIdentityManager().imageURL
         let imageData = NSData(contentsOfURL: imageURL!)
         self.profilePIcture.image = UIImage(data: imageData!)
     }
@@ -70,8 +72,8 @@ class AccountSettingsViewController: UIViewController {
     
     // A function that handles Logout
     func handleLogout() {
-        if AWSIdentityManager.sharedInstance().loggedIn {
-            AWSIdentityManager.sharedInstance().logoutWithCompletionHandler({(result: AnyObject!, error: NSError!)  in
+        if AWSIdentityManager.defaultIdentityManager().loggedIn {
+            AWSIdentityManager.defaultIdentityManager().logoutWithCompletionHandler({(result: AnyObject?, error: NSError?) -> Void in
                 // self.performSegueWithIdentifier("logout", sender:self)
             })
             //NSLog(@"%@: %@ Logout Successful", LOG_TAG, [signInProvider getDisplayName]);
@@ -132,7 +134,7 @@ class AccountSettingsViewController: UIViewController {
     // TODO: Fix the following a lot and call this
     func createNewUserSettingRow(){
 
-        let strName = AWSIdentityManager.sharedInstance().userName
+        let strName = AWSIdentityManager.defaultIdentityManager().userName
         if (strName != nil){
             self.displayNameOutlet.text = strName
         }
