@@ -24,19 +24,30 @@ class NewEventViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "saveNewEvent" {
-            let tableRow = DDBEventRow();
-            tableRow!.UserId=AWSIdentityManager.defaultIdentityManager().identityId
-            tableRow!.EventsName = self.eventTitle.text
-            tableRow!.isAllDay = isAllDayFromDateTable
-            tableRow!.StartTime = fromtimeFromDateTable
-            tableRow!.EndTime = totimeFromDateTable
+            let eventRow = DDBEventRow()
+            eventRow!.UserId=AWSIdentityManager.defaultIdentityManager().identityId
+            eventRow!.EventsName = self.eventTitle.text
+            eventRow!.isAllDay = isAllDayFromDateTable
+            eventRow!.StartTime = fromtimeFromDateTable
+            eventRow!.EndTime = totimeFromDateTable
+            
+            
+            let invitationRow = DDBEventInvitationRow()
+            invitationRow!.OrganizerUesrId = eventRow!.UserId
+            //invitationRow!.InviteeUserId = invitationList
+            invitationRow!.InviteeUserId = "us-east-1:20eddc6d-8bd4-47cb-b49b-ed67d5171864"
+            invitationRow!.EventId = eventRow!.EventId
+        
             
             isAllDayFromDateTable="N"
             fromtimeFromDateTable=""
             totimeFromDateTable=""
+            invitationList=""
             
             if !((self.eventTitle.text ?? "").isEmpty) {
-                self.updateTableRow(tableRow!)
+                self.updateEventTableRow(eventRow!)
+                self.updateInvitationTableRow(invitationRow!)
+                
             } else {
                 let alertController = UIAlertController(title: "Error: Invalid Input", message: "Event name cannot be empty.", preferredStyle: UIAlertControllerStyle.Alert)
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action:UIAlertAction) -> Void in
@@ -53,7 +64,7 @@ class NewEventViewController: UIViewController {
     }
     
     
-    func updateTableRow(tableRow:DDBEventRow) {
+    func updateEventTableRow(tableRow:DDBEventRow) {
         let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
         
         dynamoDBObjectMapper .save(tableRow) .continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
@@ -63,7 +74,7 @@ class NewEventViewController: UIViewController {
             } else {
                 print("Error: \(task.error)")
                 
-                let alertController = UIAlertController(title: "Failed to update the data into the table.", message: task.error!.description, preferredStyle: UIAlertControllerStyle.Alert)
+                let alertController = UIAlertController(title: "Failed to update the event data into the table.", message: task.error!.description, preferredStyle: UIAlertControllerStyle.Alert)
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action:UIAlertAction) -> Void in
                 })
                 alertController.addAction(okAction)
@@ -74,7 +85,26 @@ class NewEventViewController: UIViewController {
         })
     }
     
-    
+    func updateInvitationTableRow(tableRow:DDBEventInvitationRow) {
+        let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
+        
+        dynamoDBObjectMapper .save(tableRow) .continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
+            if (task.error == nil) {
+                // Do Nothing
+                
+            } else {
+                print("Error: \(task.error)")
+                
+                let alertController = UIAlertController(title: "Failed to update the invitation data into the table.", message: task.error!.description, preferredStyle: UIAlertControllerStyle.Alert)
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action:UIAlertAction) -> Void in
+                })
+                alertController.addAction(okAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            
+            return nil
+        })
+    }
 }
 
 extension UITextField

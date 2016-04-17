@@ -12,6 +12,7 @@ import AWSMobileHubHelper
 import AWSDynamoDB
 
 var eventRows:Array<DDBEventRow>?
+//var invitedeventRows:Array<DDBEventRow>?
 
 class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDelegate {
     
@@ -161,6 +162,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
                 self.doneLoading = false
             }
             
+            // Populate eventRow (the user-created events)
             let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
             let queryExpression = AWSDynamoDBQueryExpression()
             queryExpression.hashKeyAttribute = "UserId"
@@ -194,6 +196,41 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
                 }
                 return nil
             })
+            
+            // Populate eventRow (the events that invited users)
+/*            let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
+            let queryExpression = AWSDynamoDBQueryExpression()
+            queryExpression.hashKeyAttribute = "InviteeUserId"
+            queryExpression.hashKeyValues = AWSIdentityManager.defaultIdentityManager().identityId
+            queryExpression.exclusiveStartKey = self.lastEvaluatedKey
+            queryExpression.limit = 20;
+            dynamoDBObjectMapper.query(DDBEventRow.self, expression: queryExpression).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
+                
+                if self.lastEvaluatedKey == nil {
+                    eventRows?.removeAll(keepCapacity: true)
+                }
+                
+                if task.result != nil {
+                    let paginatedOutput = task.result as! AWSDynamoDBPaginatedOutput
+                    for item in paginatedOutput.items as! [DDBEventRow] {
+                        eventRows?.append(item)
+                        print(item.EventsName)
+                    }
+                    
+                    self.lastEvaluatedKey = paginatedOutput.lastEvaluatedKey
+                    if paginatedOutput.lastEvaluatedKey == nil {
+                        self.doneLoading = true
+                    }
+                    
+                }
+                
+                self.listTable.reloadData()
+                
+                if ((task.error) != nil) {
+                    print("Error: \(task.error)")
+                }
+                return nil
+            })*/
        }
     }
     

@@ -76,3 +76,31 @@ class DDBEventRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     }
 }
 
+class DDBEventInvitationRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
+    
+    var OrganizerUesrId:String?
+    var InviteeUserId:String?
+    var EventId:String? // TODO: Set this to unique ID
+    
+    
+    class func dynamoDBTableName() -> String! {
+        return DDBEventInvitationTableName
+    }
+    
+    class func hashKeyAttribute() -> String! {
+        return "EventId"
+    }
+    
+    class func rangeKeyAttribute() -> String! {
+        return "InviteeUserId"
+    }
+    
+    //MARK: NSObjectProtocol hack
+    override func isEqual(object: AnyObject?) -> Bool {
+        return super.isEqual(object)
+    }
+    
+    override func `self`() -> Self {
+        return self
+    }
+}

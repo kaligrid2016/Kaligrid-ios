@@ -11,6 +11,7 @@ import UIKit
 var isAllDayFromDateTable="N"
 var fromtimeFromDateTable=""
 var totimeFromDateTable=""
+var invitationList=""
 
 class DateTableViewController: UITableViewController {
 
@@ -19,9 +20,17 @@ class DateTableViewController: UITableViewController {
     
     @IBOutlet weak var fromDetail: UILabel!
     @IBOutlet weak var fromDatePicker: UIDatePicker!
+    @IBOutlet weak var invitationlistValue: UITextField!
+    
     @IBAction func fromDatePickerValue(sender: AnyObject) {
  //       fromDatePickerChanged()
     }
+    
+    
+    @IBAction func invitationListValueChanged(sender: AnyObject) {
+        invitationList=invitationlistValue.text!
+    }
+    
     
 //    @IBOutlet weak var toDetail: UILabel!
   //  @IBOutlet weak var toDetail: UILabel!

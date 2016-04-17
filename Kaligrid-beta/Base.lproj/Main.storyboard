@@ -1350,6 +1350,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="invitationListValueChanged:" destination="v87-C0-vQ5" eventType="valueChanged" id="22I-sp-4U5"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1476,6 +1479,7 @@
                         <outlet property="alldaySwitchOutlet" destination="v1X-83-F7g" id="3CW-3o-Uzo"/>
                         <outlet property="fromDatePicker" destination="bZG-KO-0do" id="eL7-wN-aDR"/>
                         <outlet property="fromDetail" destination="G43-Ty-7vu" id="kSB-Fj-b6I"/>
+                        <outlet property="invitationlistValue" destination="ZJ0-Gi-mvZ" id="ULP-3X-uMS"/>
                         <outlet property="reminderSwitchOutlet" destination="kzp-aN-VSf" id="NJ2-iu-4ad"/>
                         <outlet property="toDatePicker" destination="3h4-AM-DBg" id="2U2-2U-oP7"/>
                         <outlet property="toDetail" destination="wTI-Aw-b3c" id="xYm-uT-c0f"/>
