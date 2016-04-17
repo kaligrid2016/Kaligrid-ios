@@ -14,7 +14,6 @@
 		7A19CE571CC2CB9F00E3B1E0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A19CE561CC2CB9F00E3B1E0 /* SafariServices.framework */; };
 		7A19CE581CC2DCE200E3B1E0 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D91CC2C30300348C4D /* AWSCognito.framework */; };
 		7A19CE591CC2DCE200E3B1E0 /* AWSCognito.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D91CC2C30300348C4D /* AWSCognito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7A19CE5B1CC2DCE900E3B1E0 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52DA1CC2C30300348C4D /* AWSDynamoDB.framework */; };
 		7A19CE5D1CC2DCEF00E3B1E0 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D41CC2C2E900348C4D /* AWSMobileAnalytics.framework */; };
 		7A19CE5E1CC2DCEF00E3B1E0 /* AWSMobileAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D41CC2C2E900348C4D /* AWSMobileAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A19CE5F1CC2DCFA00E3B1E0 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D51CC2C2E900348C4D /* AWSS3.framework */; };
@@ -64,7 +63,8 @@
 		7A7E17791CC2C7E400792952 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7E17781CC2C7E400792952 /* libsqlite3.tbd */; };
 		7A7E177B1CC2C7ED00792952 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7E177A1CC2C7ED00792952 /* libz.tbd */; };
 		7A7F27221CC3262C003276B5 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */; };
-		7A7F27231CC3262C003276B5 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A7F27241CC32A4C003276B5 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52DA1CC2C30300348C4D /* AWSDynamoDB.framework */; };
+		7A7F27251CC32A4C003276B5 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52DA1CC2C30300348C4D /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A7F72481C89356000B7DC29 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72471C89356000B7DC29 /* NewEventViewController.swift */; };
 		7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */; };
 		7A8CD8F51C7D4E4300D462C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */; };
@@ -105,7 +105,7 @@
 				7A19CE621CC2DD0300E3B1E0 /* AWSCore.framework in Embed Frameworks */,
 				7A19CE5E1CC2DCEF00E3B1E0 /* AWSMobileAnalytics.framework in Embed Frameworks */,
 				7A19CE591CC2DCE200E3B1E0 /* AWSCognito.framework in Embed Frameworks */,
-				7A7F27231CC3262C003276B5 /* AWSDynamoDB.framework in Embed Frameworks */,
+				7A7F27251CC32A4C003276B5 /* AWSDynamoDB.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,7 +163,7 @@
 		7A713CE01C83EE200074D0C6 /* login_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_google.png; sourceTree = "<group>"; };
 		7A7E17781CC2C7E400792952 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7A7E177A1CC2C7ED00792952 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "Kaligrid-beta/Sdk/Aws/extras/AWSDynamoDB.framework"; sourceTree = "<group>"; };
+		7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = "/Users/kaligrid/Documents/Kaligrid-beta/Kaligrid-beta/Sdk/Aws/extras/AWSDynamoDB.framework"; sourceTree = "<absolute>"; };
 		7A7F72471C89356000B7DC29 /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		7A7F72491C89385C00B7DC29 /* DateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
 		7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +206,7 @@
 				7A19CE661CC2DD3500E3B1E0 /* FBSDKCoreKit.framework in Frameworks */,
 				7A19CE671CC2DD3500E3B1E0 /* FBSDKLoginKit.framework in Frameworks */,
 				7A19CE681CC2DD3500E3B1E0 /* FBSDKShareKit.framework in Frameworks */,
+				7A7F27241CC32A4C003276B5 /* AWSDynamoDB.framework in Frameworks */,
 				7A7F27221CC3262C003276B5 /* AWSDynamoDB.framework in Frameworks */,
 				7A06A00C1C852F3F00318ED0 /* SystemConfiguration.framework in Frameworks */,
 				7A06A0081C852F2000318ED0 /* StoreKit.framework in Frameworks */,
@@ -219,7 +220,6 @@
 				7A19CE5F1CC2DCFA00E3B1E0 /* AWSS3.framework in Frameworks */,
 				7AEE52D61CC2C2E900348C4D /* AWSCore.framework in Frameworks */,
 				7AEE52D71CC2C2E900348C4D /* AWSMobileAnalytics.framework in Frameworks */,
-				7A19CE5B1CC2DCE900E3B1E0 /* AWSDynamoDB.framework in Frameworks */,
 				7AEE52D81CC2C2E900348C4D /* AWSS3.framework in Frameworks */,
 				7A9FAA5E1C8FB1D6007CF78D /* FSCalendar.framework in Frameworks */,
 				7A52A4581C86A62300CAC30A /* AssetsLibrary.framework in Frameworks */,
@@ -374,7 +374,6 @@
 		7ACB9E0F1C7A758C0003A65C = {
 			isa = PBXGroup;
 			children = (
-				7A7F27211CC3262C003276B5 /* AWSDynamoDB.framework */,
 				7ACB9E1A1C7A758C0003A65C /* Kaligrid-beta */,
 				7ACB9E191C7A758C0003A65C /* Products */,
 				2063CE415E88FBC7F5E11C1C /* Pods */,
