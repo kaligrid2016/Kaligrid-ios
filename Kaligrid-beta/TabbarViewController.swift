@@ -16,8 +16,8 @@ class TabbarViewController: UITabBarController {
 
         
         // Load the bottom tab bar icons
-        let image:NSArray = ["icon_bottom_list.png", "icon_bottom_grid.png", "icon_bottom_kali.png","icon_bottom_friends.png", "icon_bottom_me.png"]
-        let selImage:NSArray = ["icon_bottom_list_selected.png", "icon_bottom_grid_selected.png", "icon_bottom_kali_selected.png","icon_bottom_friends_selected.png", "icon_bottom_me_selected.png"]
+        let image:NSArray = ["icon_bottom_list.png", "icon_bottom_kali.png","icon_bottom_friends.png", "icon_bottom_me.png"]
+        let selImage:NSArray = ["icon_bottom_list_selected.png", "icon_bottom_kali_selected.png","icon_bottom_friends_selected.png", "icon_bottom_me_selected.png"]
         
         for var i=1; i<image.count; i=i+1 {
         let listSelectImage: UIImage! = UIImage(named: selImage[i] as! String)!.imageWithRenderingMode(.AlwaysOriginal)

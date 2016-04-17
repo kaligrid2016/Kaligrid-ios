@@ -15,6 +15,8 @@ class LogInViewController: UIViewController {
     
     var didSignInObserver: AnyObject? = nil
     
+    @IBOutlet weak var facebookLogInButton: UIButton!
+    @IBOutlet weak var googleLogInButton: UIButton!
     @IBAction func facebookLogInAction(sender: AnyObject) {
         self.handleLoginWithSignInProvider(AWSFacebookSignInProvider.sharedInstance())
     }
@@ -26,6 +28,9 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        assignbackground()
+        CGRectMake()
         
         weak var weakSelf: LogInViewController? = self
         
@@ -82,5 +87,36 @@ class LogInViewController: UIViewController {
                 
                 print("result = \(result), error= \(error)")
         })
+    }
+    
+    // Set background image
+    func assignbackground(){
+        let background = UIImage(named: "login_background_main")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
+    }
+    
+    // Set button alignment
+    func CGRectMake() {
+        facebookLogInButton.setImage(UIImage(named: "icon_login_facebook.png"), forState: .Normal)
+        facebookLogInButton.setTitle("Sign in with Facebook", forState: .Normal)
+        facebookLogInButton.imageEdgeInsets = UIEdgeInsetsMake(0.0, 41.0, 0.0, 0.0)
+        facebookLogInButton.titleEdgeInsets = UIEdgeInsetsMake(0.0, 115, 0.0, 0.0)
+        facebookLogInButton.contentHorizontalAlignment = .Left
+        self.view!.addSubview(facebookLogInButton)
+        
+        googleLogInButton.setImage(UIImage(named: "icon_login_google.png"), forState: .Normal)
+        googleLogInButton.setTitle("Sign in with Google", forState: .Normal)
+        googleLogInButton.imageEdgeInsets = UIEdgeInsetsMake(0.0, 41.0, 0.0, 0.0)
+        googleLogInButton.titleEdgeInsets = UIEdgeInsetsMake(0.0, 120, 0.0, 0.0)
+        googleLogInButton.contentHorizontalAlignment = .Left
+        self.view!.addSubview(googleLogInButton)
     }
 }

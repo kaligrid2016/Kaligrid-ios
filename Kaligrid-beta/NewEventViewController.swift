@@ -13,12 +13,13 @@ import AWSDynamoDB
 class NewEventViewController: UIViewController {
     
     @IBOutlet weak var eventTitle: UITextField!
-    @IBAction func addAction(sender: AnyObject) {
-    }
+    //@IBAction func addAction(sender: AnyObject) {
+    //}
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        eventTitle.setBottomBorder()
+        eventTitle.setEventBottomBorder()
+
     }
     
     
@@ -32,10 +33,11 @@ class NewEventViewController: UIViewController {
             eventRow!.EndTime = totimeFromDateTable
             
             
+            // Do this for a list of invitations. For now, I allow to invite only one person
             let invitationRow = DDBEventInvitationRow()
             invitationRow!.OrganizerUesrId = eventRow!.UserId
             //invitationRow!.InviteeUserId = invitationList
-            invitationRow!.InviteeUserId = "us-east-1:20eddc6d-8bd4-47cb-b49b-ed67d5171864"
+            invitationRow!.InviteeUserId = "danielkim116"
             invitationRow!.EventId = eventRow!.EventId
         
             
@@ -46,7 +48,10 @@ class NewEventViewController: UIViewController {
             
             if !((self.eventTitle.text ?? "").isEmpty) {
                 self.updateEventTableRow(eventRow!)
+                
+                if !((invitationRow.InviteeUserId ?? "").isEmpty){
                 self.updateInvitationTableRow(invitationRow!)
+                }
                 
             } else {
                 let alertController = UIAlertController(title: "Error: Invalid Input", message: "Event name cannot be empty.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -109,11 +114,12 @@ class NewEventViewController: UIViewController {
 
 extension UITextField
 {
-    func setBottomBorder(){
+    func setEventBottomBorder(){
         self.borderStyle = UITextBorderStyle.None;
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor(red: 245/225, green: 166/225, blue: 35/225, alpha: 1.0).CGColor
+
         border.frame = CGRect(x: 0, y: self.frame.size.height - width,   width:  self.frame.size.width, height: self.frame.size.height)
         
         border.borderWidth = width

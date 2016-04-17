@@ -189,7 +189,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
 
                 }
                 
-                self.listTable.reloadData()
+                //self.listTable.reloadData()
                 
                 if ((task.error) != nil) {
                     print("Error: \(task.error)")
@@ -198,23 +198,38 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
             })
             
             // Populate eventRow (the events that invited users)
-/*            let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
-            let queryExpression = AWSDynamoDBQueryExpression()
-            queryExpression.hashKeyAttribute = "InviteeUserId"
-            queryExpression.hashKeyValues = AWSIdentityManager.defaultIdentityManager().identityId
-            queryExpression.exclusiveStartKey = self.lastEvaluatedKey
-            queryExpression.limit = 20;
-            dynamoDBObjectMapper.query(DDBEventRow.self, expression: queryExpression).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
-                
-                if self.lastEvaluatedKey == nil {
-                    eventRows?.removeAll(keepCapacity: true)
-                }
+            let queryInviteExpression = AWSDynamoDBQueryExpression()
+            queryInviteExpression.hashKeyAttribute = "InviteeUserId"
+            queryInviteExpression.hashKeyValues = "danielkim116"
+            //queryInviteExpression.hashKeyValues = AWSIdentityManager.defaultIdentityManager().identityId
+            dynamoDBObjectMapper.query(DDBEventInvitationRow.self, expression: queryInviteExpression).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
                 
                 if task.result != nil {
                     let paginatedOutput = task.result as! AWSDynamoDBPaginatedOutput
-                    for item in paginatedOutput.items as! [DDBEventRow] {
-                        eventRows?.append(item)
-                        print(item.EventsName)
+                    for invitationrow in paginatedOutput.items as! [DDBEventInvitationRow] {
+                        
+                        let queryinvitedEventExpression = AWSDynamoDBScanExpression()
+                        queryinvitedEventExpression.filterExpression = "EventId = :val"
+                        queryinvitedEventExpression.expressionAttributeValues = [":val": invitationrow.EventId!]
+                        
+                        dynamoDBObjectMapper.scan(DDBEventRow.self, expression: queryinvitedEventExpression).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (taskInvitation:AWSTask!) -> AnyObject! in
+                            
+                            if taskInvitation.result != nil {
+                                let myinvitations = task.result as! AWSDynamoDBPaginatedOutput
+
+                                /* This does not seem to return [DDBEventRow].. Look into it. 
+                                for invitationevent in myinvitations.items as! [DDBEventRow] {
+                                    eventRows?.append(invitationevent)
+                                    print(invitationevent.EventsName)
+                                }*/
+ 
+                            }
+                            
+                            if ((task.error) != nil) {
+                                print("Error: \(task.error)")
+                            }
+                            return nil
+                        })
                     }
                     
                     self.lastEvaluatedKey = paginatedOutput.lastEvaluatedKey
@@ -230,7 +245,8 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
                     print("Error: \(task.error)")
                 }
                 return nil
-            })*/
+            })
+            
        }
     }
     
