@@ -86,6 +86,7 @@
 		7A6C41811CC4354D0053925A /* FYIDateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C41801CC4354D0053925A /* FYIDateTableViewController.swift */; };
 		7A6C41831CC438290053925A /* ReminderDateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C41821CC438290053925A /* ReminderDateTableViewController.swift */; };
 		7A6C41851CC4384F0053925A /* NewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C41841CC4384F0053925A /* NewReminderViewController.swift */; };
+		7A6C41871CC46D2F0053925A /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C41861CC46D2F0053925A /* DateCell.swift */; };
 		7A713CE11C83EE200074D0C6 /* login_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CDF1C83EE200074D0C6 /* login_facebook.png */; };
 		7A713CE21C83EE200074D0C6 /* login_google.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A713CE01C83EE200074D0C6 /* login_google.png */; };
 		7A7E17791CC2C7E400792952 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7E17781CC2C7E400792952 /* libsqlite3.tbd */; };
@@ -214,6 +215,7 @@
 		7A6C41801CC4354D0053925A /* FYIDateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYIDateTableViewController.swift; sourceTree = "<group>"; };
 		7A6C41821CC438290053925A /* ReminderDateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDateTableViewController.swift; sourceTree = "<group>"; };
 		7A6C41841CC4384F0053925A /* NewReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReminderViewController.swift; sourceTree = "<group>"; };
+		7A6C41861CC46D2F0053925A /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		7A713CDF1C83EE200074D0C6 /* login_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_facebook.png; sourceTree = "<group>"; };
 		7A713CE01C83EE200074D0C6 /* login_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_google.png; sourceTree = "<group>"; };
 		7A7E17781CC2C7E400792952 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -431,6 +433,7 @@
 				7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */,
 				7AF00BA81C800D0E00FB22E3 /* TabbarViewController.swift */,
 				7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */,
+				7A6C41861CC46D2F0053925A /* DateCell.swift */,
 				7A5824111CAB6B1200B7C886 /* BasicCell.swift */,
 				7A6B5B5A1CA5DDDC009ED9DE /* EventTypeViewController.swift */,
 				7A6C417E1CC433890053925A /* NewFYIViewController.swift */,
@@ -695,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5824121CAB6B1200B7C886 /* BasicCell.swift in Sources */,
+				7A6C41871CC46D2F0053925A /* DateCell.swift in Sources */,
 				7AF00BA91C800D0E00FB22E3 /* TabbarViewController.swift in Sources */,
 				7A6C417F1CC433890053925A /* NewFYIViewController.swift in Sources */,
 				7A6C41831CC438290053925A /* ReminderDateTableViewController.swift in Sources */,

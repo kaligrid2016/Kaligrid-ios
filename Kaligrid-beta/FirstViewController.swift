@@ -19,6 +19,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
     var lastEvaluatedKey:[NSObject : AnyObject]!
     var  doneLoading = false
     var lock:NSLock?
+    var oldDate = "merong"
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var listTable: UITableView!
@@ -64,6 +65,9 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
         self.addButtonLook.backgroundColor = UIColor(red: 0.031, green: 0.729, blue: 0.729, alpha: 1.0)
         self.addButtonLook.setImage(UIImage(named:"icon_new.png"), forState: .Normal)
         
+        // Dynamic row height
+        configureTableView()
+        
         // Preparation for Event Rows
         eventRows = []
         lock = NSLock()
@@ -94,32 +98,83 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "BasicCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BasicCell
         let eachevent = eventRows![indexPath.row]
-        // Configure the cell...
-        // display time
-        if eachevent.isAllDay == "Y" {
-            cell.startTimeOutlet.text = "All-day"
+        var dateAndTime = eachevent.StartTime?.componentsSeparatedByString(", ")
+        let newDate = dateAndTime![0]
+        if newDate != oldDate {
+            let cellIdentifier = "DateCell"
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DateCell
+            cell.agendaDateOutlet.text = newDate
+            cell.startTimeOutlet.text = dateAndTime![1]
+            
+            // set icon image
+            if eachevent.eventType == "\(DDBEventRowType.Event.rawValue)"{
+                cell.self.eventTypeIconOutlet.image = UIImage(named: "icon_front_event.png")
+            }
+            
+            // diaplay event title
+            cell.eventTitleOutlet.text = eachevent.EventsName
+            
+            // draw lines
+            let shapeLayer: CAShapeLayer = CAShapeLayer.init()
+            shapeLayer.bounds = cell.bounds
+            shapeLayer.position = cell.center
+            shapeLayer.fillColor = UIColor.clearColor().CGColor
+            shapeLayer.strokeColor = UIColor(red: 112/225, green: 110/225, blue: 110/225, alpha: 1.0).CGColor
+            shapeLayer.lineWidth = 0.5
+            shapeLayer.lineJoin = kCALineJoinRound
+            shapeLayer.lineDashPattern = [Int(3), Int(1)]
+            let path: CGMutablePathRef = CGPathCreateMutable()
+            CGPathMoveToPoint(path, nil, 0, 0)
+            CGPathAddLineToPoint(path, nil, cell.contentView.bounds.size.width, 0)
+            shapeLayer.path = path
+            cell.layer.addSublayer(shapeLayer)
+            let shapeLayer2: CAShapeLayer = CAShapeLayer.init()
+            shapeLayer2.bounds = cell.bounds
+            shapeLayer2.position = cell.center
+            shapeLayer2.fillColor = UIColor.clearColor().CGColor
+            shapeLayer2.strokeColor = UIColor(red: 112/225, green: 110/225, blue: 110/225, alpha: 0.5).CGColor
+            shapeLayer2.lineWidth = 0.5
+            shapeLayer2.lineJoin = kCALineJoinRound
+            shapeLayer2.lineDashPattern = [Int(3), Int(1)]
+            let path2: CGMutablePathRef = CGPathCreateMutable()
+            CGPathMoveToPoint(path2, nil, 0, 30)
+            CGPathAddLineToPoint(path2, nil, cell.contentView.bounds.size.width, 30)
+            shapeLayer2.path = path2
+            cell.layer.addSublayer(shapeLayer2)
+            
+            
+            oldDate = newDate
+            return cell
+            
         } else {
-            cell.startTimeOutlet.text = eachevent.StartTime
+            let cellIdentifier = "BasicCell"
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BasicCell
+        
+            // Configure the cell...
+            // display time
+            if eachevent.isAllDay == "Y" {
+                cell.startTimeOutlet.text = "All-day"
+            } else {
+                cell.startTimeOutlet.text = dateAndTime![1]
+            }
+        
+            // set icon image
+            if eachevent.eventType == "\(DDBEventRowType.Event.rawValue)"{
+                cell.self.eventTypeIconOutlet.image = UIImage(named: "icon_front_event.png")
+            }
+        
+            // diaplay event title
+            cell.eventTitleOutlet.text = eachevent.EventsName
+            return cell
         }
         
-        // set icon image
-        if eachevent.eventType == "\(DDBEventRowType.Event.rawValue)"{
-            cell.self.eventTypeIconOutlet.image = UIImage(named: "icon_front_event.png")
-        }
-        
-        // diaplay event title
-        cell.eventTitleOutlet.text = eachevent.EventsName
-        
-        return cell
     }
     
     //dynamic row height
     func configureTableView() {
         listTable.rowHeight = UITableViewAutomaticDimension
-        listTable.estimatedRowHeight = 20.0
+        listTable.estimatedRowHeight = 36.0
     }
     
     override func viewDidAppear(animated: Bool) {
