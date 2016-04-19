@@ -35,7 +35,7 @@ class NewEventViewController: UIViewController {
             
             // Do this for a list of invitations. For now, I allow to invite only one person
             let invitationRow = DDBEventInvitationRow()
-            invitationRow!.OrganizerUesrId = eventRow!.UserId
+            invitationRow!.OrganizerUserId = "kgbisa"  //eventRow!.UserId
             //invitationRow!.InviteeUserId = invitationList
             invitationRow!.InviteeUserId = "danielkim116"
             invitationRow!.EventId = eventRow!.EventId

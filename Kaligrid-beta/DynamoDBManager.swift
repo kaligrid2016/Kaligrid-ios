@@ -78,7 +78,7 @@ class DDBEventRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
 
 class DDBEventInvitationRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     
-    var OrganizerUesrId:String?
+    var OrganizerUserId:String?
     var InviteeUserId:String?
     var EventId:String? // TODO: Set this to unique ID
     
