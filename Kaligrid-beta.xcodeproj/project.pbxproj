@@ -11,6 +11,9 @@
 		7A06A0081C852F2000318ED0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06A0071C852F2000318ED0 /* StoreKit.framework */; };
 		7A06A00A1C852F3300318ED0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06A0091C852F3300318ED0 /* AddressBook.framework */; };
 		7A06A00C1C852F3F00318ED0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06A00B1C852F3F00318ED0 /* SystemConfiguration.framework */; };
+		7A160F9D1CD6CC2800A5F1C1 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A160F9C1CD6CC2800A5F1C1 /* RegistrationViewController.swift */; };
+		7A160F9F1CD6D2B000A5F1C1 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A160F9E1CD6D2B000A5F1C1 /* SigninViewController.swift */; };
+		7A160FA11CD6DCF900A5F1C1 /* icon_top_todaycontainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A160FA01CD6DCF900A5F1C1 /* icon_top_todaycontainer.png */; };
 		7A19CE571CC2CB9F00E3B1E0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A19CE561CC2CB9F00E3B1E0 /* SafariServices.framework */; };
 		7A19CE581CC2DCE200E3B1E0 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D91CC2C30300348C4D /* AWSCognito.framework */; };
 		7A19CE591CC2DCE200E3B1E0 /* AWSCognito.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEE52D91CC2C30300348C4D /* AWSCognito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -147,6 +150,9 @@
 		7A06A0091C852F3300318ED0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		7A06A00B1C852F3F00318ED0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7A06A00D1C8533A400318ED0 /* Kaligrid-beta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Kaligrid-beta-Bridging-Header.h"; path = "AmazonAws/Kaligrid-beta-Bridging-Header.h"; sourceTree = "<group>"; };
+		7A160F9C1CD6CC2800A5F1C1 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		7A160F9E1CD6D2B000A5F1C1 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		7A160FA01CD6DCF900A5F1C1 /* icon_top_todaycontainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_top_todaycontainer.png; sourceTree = "<group>"; };
 		7A19CE561CC2CB9F00E3B1E0 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		7A19CE631CC2DD3500E3B1E0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Kaligrid-beta/Sdk/Facebook/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		7A19CE641CC2DD3500E3B1E0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Kaligrid-beta/Sdk/Facebook/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
@@ -336,6 +342,7 @@
 		7A5824131CAB71C300B7C886 /* Smallicons */ = {
 			isa = PBXGroup;
 			children = (
+				7A160FA01CD6DCF900A5F1C1 /* icon_top_todaycontainer.png */,
 				7A5824141CAB71F600B7C886 /* icon_front_event.png */,
 			);
 			name = Smallicons;
@@ -431,6 +438,8 @@
 			isa = PBXGroup;
 			children = (
 				7A8CD8F41C7D4E4300D462C8 /* LogInViewController.swift */,
+				7A160F9C1CD6CC2800A5F1C1 /* RegistrationViewController.swift */,
+				7A160F9E1CD6D2B000A5F1C1 /* SigninViewController.swift */,
 				7AF00BA81C800D0E00FB22E3 /* TabbarViewController.swift */,
 				7ACB9E1D1C7A758C0003A65C /* FirstViewController.swift */,
 				7A6C41861CC46D2F0053925A /* DateCell.swift */,
@@ -594,6 +603,7 @@
 				7A6C417A1CC3D21B0053925A /* icon_login_profile_check@3x.png in Resources */,
 				7AB180671C9DEFDD00FDCD91 /* Main.storyboard in Resources */,
 				7A6C41561CC3CF790053925A /* login_background_main@3x.png in Resources */,
+				7A160FA11CD6DCF900A5F1C1 /* icon_top_todaycontainer.png in Resources */,
 				7A6C416F1CC3D21B0053925A /* icon_login_back@1x.png in Resources */,
 				7A6C417C1CC3D21B0053925A /* icon_login_twitter@2x.png in Resources */,
 				7A6C41791CC3D21B0053925A /* icon_login_profile_check@2x.png in Resources */,
@@ -701,6 +711,7 @@
 				7A6C41871CC46D2F0053925A /* DateCell.swift in Sources */,
 				7AF00BA91C800D0E00FB22E3 /* TabbarViewController.swift in Sources */,
 				7A6C417F1CC433890053925A /* NewFYIViewController.swift in Sources */,
+				7A160F9D1CD6CC2800A5F1C1 /* RegistrationViewController.swift in Sources */,
 				7A6C41831CC438290053925A /* ReminderDateTableViewController.swift in Sources */,
 				7A6B5B5B1CA5DDDC009ED9DE /* EventTypeViewController.swift in Sources */,
 				7AB1805E1C9D7A5D00FDCD91 /* DynamoDBManager.swift in Sources */,
@@ -716,6 +727,7 @@
 				7A3033801C9E20E7009DC957 /* PrivacySettingTableViewController.swift in Sources */,
 				7A9FAA681C8FD0BC007CF78D /* AccountSettingsViewController.swift in Sources */,
 				7AB180601C9DEDB800FDCD91 /* SettingUITableViewController.swift in Sources */,
+				7A160F9F1CD6D2B000A5F1C1 /* SigninViewController.swift in Sources */,
 				7A7F724A1C89385C00B7DC29 /* DateTableViewController.swift in Sources */,
 				7ACB9E1E1C7A758C0003A65C /* FirstViewController.swift in Sources */,
 				7A8CD8FB1C7D53D500D462C8 /* FifthViewController.swift in Sources */,

@@ -23,6 +23,8 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var listTable: UITableView!
+
+    @IBOutlet weak var todayContainerOutlet: UIButton!
     
     
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
@@ -46,8 +48,15 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
         self.calendar.appearance.headerTitleColor = UIColor(red: 0.439, green: 0.431, blue: 0.431, alpha: 1.0)
         self.calendar.appearance.headerTitleFont = UIFont(name: "HelveticaNeue-Bold", size: 16)
         //self.calendar.appearance.eventColor = UIColor.greenColor()
-        //self.calendar.appearance.selectionColor = UIColor.blueColor()
-        self.calendar.appearance.todayColor = UIColor(red: 0.031, green: 0.729, blue: 0.729, alpha: 1.0)
+        self.calendar.appearance.selectionColor = UIColor(red: 8/225, green: 186/225, blue: 186/225, alpha: 1.0)
+        //self.calendar.appearance.todayColor = UIColor(red: 8/225, green: 186/225, blue: 186/225, alpha: 1.0)
+        print("today")
+        print(self.calendar.today)
+        if self.calendar.selectedDate == self.calendar.today {
+            self.calendar.appearance.todayColor = UIColor(red: 8/225, green: 186/225, blue: 186/225, alpha: 1.0)
+        } else{
+            self.calendar.appearance.todayColor = UIColor(red: 191/225, green: 191/225, blue: 191/225, alpha: 1.0)
+        }
         
         // Calendar mode
         
@@ -64,6 +73,22 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
         self.addButtonLook.layer.cornerRadius = 0.5 * self.addButtonLook.bounds.size.width
         self.addButtonLook.backgroundColor = UIColor(red: 0.031, green: 0.729, blue: 0.729, alpha: 1.0)
         self.addButtonLook.setImage(UIImage(named:"icon_new.png"), forState: .Normal)
+        
+        // Draw the today button
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd"
+        var todaysDate = dateFormatter.stringFromDate(self.calendar.today)
+        let index = todaysDate.startIndex.advancedBy(0)
+        if todaysDate[index] == "0" {
+            todaysDate = String(todaysDate.characters.dropFirst())
+        }
+        todayContainerOutlet.setTitle(todaysDate, forState: UIControlState.Normal)
+        todayContainerOutlet.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        todayContainerOutlet.titleLabel?.font = UIFont(name: "System", size: 12)
+        todayContainerOutlet.setBackgroundImage(UIImage(named: "icon_top_todaycontainer"), forState: UIControlState.Normal)
+        todayContainerOutlet.titleEdgeInsets = UIEdgeInsetsMake(5.0, 0.0, 0.0, 0.0)
+        
+        
         
         // Dynamic row height
         configureTableView()
@@ -187,7 +212,7 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
     }
     
     @IBAction func unwindToFirstViewController (sender: UIStoryboardSegue){
-        self.refreshList(true)
+        self.refreshList(false)
         listTable.reloadData()
         
     }
@@ -320,16 +345,6 @@ class FirstViewController: UIViewController, FSCalendarDataSource, UITableViewDe
     }
     
     
-    /*
-     func accessEventRows(){
-     for eachevent in self.eventRows! {
-     let name = eachevent.EventsName
-     let startdate = eachevent.StartTime
-     let enddate = eachevent.EndTime
-     
-     }
-     
-     }*/
     
 }
 

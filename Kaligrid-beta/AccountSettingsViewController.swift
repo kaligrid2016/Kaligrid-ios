@@ -24,6 +24,7 @@ class AccountSettingsViewController: UIViewController {
     
     @IBAction func logoutAction(sender: AnyObject) {
         self.handleLogout()
+        exit(0)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -50,7 +51,7 @@ class AccountSettingsViewController: UIViewController {
         super.viewDidLoad()
         
         let strId   = AWSIdentityManager.defaultIdentityManager().identityId
-        self.getTableRow(strId!)
+        self.getUserTableRow(strId!)
         
         let imageURL = AWSIdentityManager.defaultIdentityManager().imageURL
         let imageData = NSData(contentsOfURL: imageURL!)
@@ -84,7 +85,7 @@ class AccountSettingsViewController: UIViewController {
     }
     
     // A function that gets a particular row
-    func getTableRow(userid: String) {
+    func getUserTableRow(userid: String) {
         let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
         
         dynamoDBObjectMapper .load(DDBUserRow.self, hashKey: userid, rangeKey: nil) .continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in

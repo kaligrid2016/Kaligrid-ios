@@ -8,12 +8,14 @@
 
 import UIKit
 import AWSMobileHubHelper
+import AWSDynamoDB
 
 var LOG_TAG = [String]();
 
 class LogInViewController: UIViewController {
     
     var didSignInObserver: AnyObject? = nil
+    var isRegistered = false
     
     @IBOutlet weak var facebookLogInButton: UIButton!
     @IBOutlet weak var googleLogInButton: UIButton!
@@ -57,11 +59,9 @@ class LogInViewController: UIViewController {
     
     
     override func viewDidAppear(animated: Bool) {
-        if AWSIdentityManager.defaultIdentityManager().loggedIn{
-            self.performSegueWithIdentifier("login", sender:self)
-        }
-        
+        leaveLogInpage();
     }
+    
     
     func handleGoogleLogin() {
         self.handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
@@ -70,7 +70,7 @@ class LogInViewController: UIViewController {
     func handleFacebookLogin() {
         self.handleLoginWithSignInProvider(AWSFacebookSignInProvider.sharedInstance())
     }
-
+    
     
     func handleLoginWithSignInProvider(signInProvider: AWSSignInProvider) {
         AWSIdentityManager.defaultIdentityManager().loginWithSignInProvider(signInProvider, completionHandler:
@@ -81,6 +81,7 @@ class LogInViewController: UIViewController {
                         //self.dismissViewControllerAnimated(true, completion: { _ in })
                         //self.parentViewController!.dismissViewControllerAnimated(true, completion:nil)
                         //self.presentViewController(self, animated: true, completion:nil)
+                        self.leaveLogInpage()
                         
                     })
                 }
@@ -118,5 +119,57 @@ class LogInViewController: UIViewController {
         googleLogInButton.titleEdgeInsets = UIEdgeInsetsMake(0.0, 120, 0.0, 0.0)
         googleLogInButton.contentHorizontalAlignment = .Left
         self.view!.addSubview(googleLogInButton)
+    }
+    
+    func leaveLogInpage(){
+        let strId   = AWSIdentityManager.defaultIdentityManager().identityId
+        if !(strId==nil) && AWSIdentityManager.defaultIdentityManager().loggedIn{
+            self.checkifUserRegistred(strId!)
+            
+            if self.isRegistered{
+                self.performSegueWithIdentifier("login", sender:self)
+            }else{
+                self.performSegueWithIdentifier("register", sender:self)
+            }
+        }
+    }
+    
+    // Check if a user is registered or not.
+    func checkifUserRegistred(userid: String) {
+        let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
+        let task = dynamoDBObjectMapper .load(DDBUserRow.self, hashKey: userid, rangeKey: nil) as AWSTask!
+        
+        
+        if (task.error == nil) {
+            if (task.result != nil ){
+            self.isRegistered = true
+            }else{
+                self.isRegistered = true // Fix this.. Figure out what the problem is... :(
+            }
+            
+        } else {
+            self.isRegistered = false
+        }
+        
+        
+        //
+        //        dynamoDBObjectMapper .load(DDBUserRow.self, hashKey: userid, rangeKey: nil)
+        //            .continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) -> AnyObject! in
+        //            if (task.error == nil) {
+        //                print("Start Getting Row from User Table")
+        //                self.isRegistered = true
+        //
+        //            } else {
+        //                               self.isRegistered = false
+        //                print("Error: \(task.error)")
+        //                let alertController = UIAlertController(title: "Failed to get item from table.", message: task.error!.description, preferredStyle: UIAlertControllerStyle.Alert)
+        //                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action:UIAlertAction) -> Void in
+        //                })
+        //                alertController.addAction(okAction)
+        //                self.presentViewController(alertController, animated: true, completion: nil)
+        //            }
+        //                print("End Getting Row from User Table")
+        //            return nil
+        //        })
     }
 }
